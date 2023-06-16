@@ -1,0 +1,23 @@
+.swiper {
+    width: inherit;
+    margin: 40px 0;
+}
+
+.swiper-slide {
+    height: 200px;
+    width: 200px;
+    background: none;
+    line-height: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide .slide-image {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    object-position: center;
+    filter: grayscale(100%);
+}

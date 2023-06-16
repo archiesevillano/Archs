@@ -1,0 +1,25 @@
+.socials-list {
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    top: 45%;
+    right: 0;
+    padding: 0 12px;
+}
+
+.socials-list::before {
+    content: 'Share';
+    text-transform: uppercase;
+    color: inherit;
+    position: absolute;
+    top: -50px;
+    right: -6px;
+    transform: rotate(-90deg);
+    font-weight: bold;
+    font-family: 'Josefin Sans';
+    letter-spacing: 2px;
+}
+
+.socials-list li {
+    margin: 10px 0;
+}

@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import AppTheme, { ProvideTheme } from './AppTheme';
+import { useContext } from 'react';
+import AppHeader from './components/AppHeader/AppHeader';
+import AppContent from './components/AppContent/AppContent';
+import Socials from './components/Socials/Socials';
+import AppRoutes from './AppRoutes';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppRoutes>
+        <AppHeader />
+        <AppContent />
+        <Socials />
+      </AppRoutes>
     </div>
   );
 }
