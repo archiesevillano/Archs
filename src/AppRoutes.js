@@ -28,8 +28,6 @@ const AppRoutes = ({ children }) => {
             {children}
             <Routes>
                 <Route path="/" />
-                <Route path="/" />
-                <Route path="/" />
             </Routes>
         </Router>
     );

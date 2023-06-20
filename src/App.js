@@ -6,15 +6,25 @@ import AppHeader from './components/AppHeader/AppHeader';
 import AppContent from './components/AppContent/AppContent';
 import Socials from './components/Socials/Socials';
 import AppRoutes from './AppRoutes';
+import AboutSection from './components/AboutSection/AboutSection';
+import Contacts from './components/Contacts/Contacts';
+import ScrollSpy from 'react-ui-scrollspy';
+import Services from './components/Services/Services';
+import Skills from './components/Skills/Skills';
 
 function App() {
-
   return (
     <div className="App">
       <AppRoutes>
-        <AppHeader />
-        <AppContent />
-        <Socials />
+        <ScrollSpy scrollThrottle={200}>
+          <AppHeader />
+          <AppContent />
+          <Services />
+          <Skills />
+          <Socials />
+          <AboutSection />
+          <Contacts phoneNumber="(+63)956-881-0654" email="archie.sevillano29@gmail.com" address="Las Piñas City NCR, Metro Manila PH" />
+        </ScrollSpy>
       </AppRoutes>
     </div>
   );

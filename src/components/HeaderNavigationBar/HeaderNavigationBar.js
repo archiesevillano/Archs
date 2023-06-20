@@ -1,13 +1,14 @@
-import { Box, Container, Toolbar, Typography, Button, useTheme } from "@mui/material";
+import { Box, Container, Toolbar, Typography, Button, useTheme, IconButton } from "@mui/material";
 import "./HeaderNavigationBar.css";
 import Brand from "../Brand/Brand";
 import React, { useState, useContext } from 'react';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { ProvideTheme } from "../../AppTheme";
+import { Link } from "react-router-dom";
 
 const HeaderNavigationBar = () => {
-    const pages = ["Projects", "About", "Contacts"];
+    const pages = ["Projects", "Services", "About", "Contacts"];
 
     const { mode, setMode } = useContext(ProvideTheme);
     const switchMode = () => {
@@ -24,20 +25,21 @@ const HeaderNavigationBar = () => {
                 <Toolbar disableGutters>
                     <Brand />
                     <Box sx={{ justifyContent: "flex-end", flexGrow: 1, gap: "18px", display: "flex" }}>
-                        <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: "18px" }}>
+                        <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: "18px", alignItems: "center" }}>
                             {pages.map((page) => (
-                                <Typography
-                                    variant="h3"
+                                <Link
+
+                                    data-to-scrollspy-id={page}
                                     key={page}
-                                    sx={{ my: 2, color: 'inherit', display: 'block', fontSize: '1.2rem' }}
+                                    style={{ transition: "all 0.2s ease-in-out", color: currentTheme.palette.text, display: 'block', fontSize: '1.2rem', fontFamily: "DM Serif Text" }}
                                 >
                                     {page}
-                                </Typography>
+                                </Link>
                             ))}
                         </Box>
-                        <Button onClick={switchMode} sx={{ borderRadius: "50%", minWidth: "55px" }}>
+                        <IconButton onClick={switchMode}>
                             {mode === "dark" ? <DarkModeIcon /> : <Brightness7Icon />}
-                        </Button>
+                        </IconButton>
                     </Box>
                 </Toolbar>
             </Container>
@@ -46,3 +48,7 @@ const HeaderNavigationBar = () => {
 }
 
 export default HeaderNavigationBar;
+
+
+// Apply Styles on the header navigation bar
+// Apply Download CV

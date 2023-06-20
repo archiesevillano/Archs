@@ -45,8 +45,7 @@
     align-items: center;
     position: relative;
     z-index: 1;
-    height: 100%;
-    pointer-events: none;
+    height: 92%;
     transition: opacity 1s ease-in-out;
     overflow: hidden;
 }

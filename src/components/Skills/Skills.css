@@ -1,0 +1,9 @@
+.skill-wrapper {
+    width: 100%;
+}
+
+.skill-wrapper .left,
+.skill-wrapper .right {
+    width: 50%;
+    padding: 20px;
+}

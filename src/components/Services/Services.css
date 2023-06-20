@@ -1,0 +1,35 @@
+.services-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.services-section .services-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+
+.services-section .services-card {
+    max-width: 250px;
+    min-width: 250px;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.services-section .services-card::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    margin: 25px;
+    background-color: var(--primary);
+}

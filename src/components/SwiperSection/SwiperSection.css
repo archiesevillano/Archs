@@ -1,9 +1,10 @@
-.swiper {
-    width: inherit;
+.technologies-swiper {
+    width: 100%;
+    height: auto;
     margin: 40px 0;
 }
 
-.swiper-slide {
+.technologies-slides {
     height: 200px;
     width: 200px;
     background: none;
@@ -14,7 +15,7 @@
     justify-content: center;
 }
 
-.swiper-slide .slide-image {
+.technologies-swiper .swiper-slide .slide-image {
     width: 50%;
     height: 50%;
     object-fit: contain;

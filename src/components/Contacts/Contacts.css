@@ -1,0 +1,30 @@
+.appfooter {
+    padding: 40px 20px;
+}
+
+.contact-details-list {
+    list-style-type: none;
+    padding: 0;
+    min-width: 185px;
+}
+
+.contact-details-list li {
+    margin: 40px 0;
+}
+
+.contact-details-list li .detail-header {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.more-list {
+    list-style-type: none;
+    padding: 0;
+    min-width: 185px;
+}
+
+.more-list li a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+}

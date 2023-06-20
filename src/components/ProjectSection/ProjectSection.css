@@ -1,0 +1,41 @@
+.projects-swiper {
+    margin: 40px 0;
+    max-width: 100%;
+    height: 550px;
+}
+
+.project-swiper-slide {
+    width: 300px;
+    text-align: center;
+    font-size: 18px;
+    background: none;
+    height: 100%;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-swiper .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+    background-color: rgb(139, 139, 139);
+    /* Change this to a color that is visible in dark mode */
+}
+
+.projects-swiper .swiper-pagination-bullet-active {
+    background-color: var(--primary);
+    /* Change this to your desired color */
+}
+
+/* Override the arrow color */
+.projects-swiper .swiper-button-next,
+.projects-swiper .swiper-button-prev {
+    color: var(--primary);
+    /* Change this to your desired color */
+}
+
+/* Override the arrow background color (optional) */
+.projects-swiper .swiper-button-next::after,
+.projects-swiper .swiper-button-prev::after {
+    background-color: transparent;
+    /* Change this to your desired background color */
+}

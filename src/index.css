@@ -28,3 +28,23 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-track {
   background: var(--secondary);
 }
+
+.active-scroll-spy {
+  color: var(--primary);
+  position: relative;
+}
+
+.active-scroll-spy::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+}
+
+html {
+  scroll-padding-top: 120px;
+  /* height of your navbar */
+}

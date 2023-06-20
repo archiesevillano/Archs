@@ -7,9 +7,19 @@ import EmailIcon from '@mui/icons-material/Email';
 import "./AppContent.css";
 import { useMemo, useState } from "react";
 import SwiperSection from "../SwiperSection/SwiperSection";
-import AboutSection from "../AboutSection/AboutSection";
+import ProjectSection from "../ProjectSection/ProjectSection";
+import FileDownload from "js-file-download";
+import Axios from "axios";
 
 const AppContent = () => {
+
+    // download resume file from firebase
+    const downloadResume = async () => {
+        const response = await Axios.get("http://localhost:3001/file/download/resume.pdf", { responseType: 'blob' });
+        const data = await response.data;
+        console.log(data);
+        FileDownload(data, "ACS_CV.pdf");
+    }
 
     const currentTheme = useTheme();
     const [hasStarted, setStartStatus] = useState(false);
@@ -42,7 +52,7 @@ const AppContent = () => {
                 <Paper square sx={{ height: "100%", opacity: "0.2", width: "100%", position: "absolute", top: "0", left: "0", zIndex: "-1" }} />
                 <div className="orange-cover" style={{ width: started }}>
                     <span className="bigHello">He<br />llo</span>
-                    <Button onClick={() => setStartStatus(!hasStarted)} sx={{ position: "absolute", bottom: "15px", right: "20px", color: currentTheme.palette.text.primary, fontFamily: "Open Sans" }} endIcon={hasStarted ? <ArrowBackIcon /> : <ArrowForwardOutlinedIcon />}>
+                    <Button onClick={() => setStartStatus(!hasStarted)} sx={{ position: "absolute", bottom: "15px", right: "20px", color: currentTheme.palette.text.primary, fontFamily: "Open Sans", zIndex: "1" }} endIcon={hasStarted ? <ArrowBackIcon /> : <ArrowForwardOutlinedIcon />}>
                         {hasStarted ? "Back" : "Get Started"}
                     </Button>
                 </div>
@@ -50,12 +60,15 @@ const AppContent = () => {
                     <div className="left">
                         <Box>
                             <Typography variant="h3">I'm</Typography>
-                            <Typography variant="h2" sx={{ filter: "invert(1)", fontWeight: "bold", fontSize: "5rem", textTransform: "uppercase" }}>Archie<br />Sevillano</Typography>
+                            <Typography variant="h2" sx={{ filter: "invert(1)", fontWeight: "bold", fontSize: "4.5rem", textTransform: "uppercase" }}>Archie<br />Sevillano</Typography>
                             <Typography variant="h3" sx={{ fontSize: "2rem" }}>Full-Stack Web Developer</Typography>
                             <Typography variant="body1" maxWidth="300px" sx={{ marginTop: "10px", fontSize: "1rem" }}>
                                 I am a passionate Web Developer who transform my Ideas into digital reality with Creativity and Technical Expertise
                             </Typography>
-
+                            <Box sx={{ display: "flex", gap: "20px", margin: "20px 0" }}>
+                                <Button variant="contained" color="success" sx={{ width: "150px" }} startIcon={<DownloadIcon />} onClick={downloadResume}>Download CV</Button>
+                                <Button variant="contained" color="secondary" sx={{ width: "150px", color: "white" }} startIcon={<EmailIcon />}>Message me</Button>
+                            </Box>
                         </Box>
                     </div>
                     <div className="right">
@@ -66,7 +79,7 @@ const AppContent = () => {
             <Container maxWidth="xl">
                 <SwiperSection />
             </Container>
-            <AboutSection />
+            <ProjectSection />
         </main >
     );
 }
