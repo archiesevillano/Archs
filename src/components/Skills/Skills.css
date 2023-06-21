@@ -1,4 +1,8 @@
-.skill-wrapper {
+.skills-container {
+    margin: 60px 0;
+}
+
+.skills-container .skill-wrapper {
     width: 100%;
 }
 

@@ -7,7 +7,6 @@ import EmailIcon from '@mui/icons-material/Email';
 import "./AppContent.css";
 import { useMemo, useState } from "react";
 import SwiperSection from "../SwiperSection/SwiperSection";
-import ProjectSection from "../ProjectSection/ProjectSection";
 import FileDownload from "js-file-download";
 import Axios from "axios";
 
@@ -48,7 +47,8 @@ const AppContent = () => {
 
     return (
         <main className="app-main">
-            <Container maxWidth="xl" sx={{ height: "85vh", position: "relative", overflow: "hidden" }} disableGutters>
+            {/* Desktop and Wider View Screens */}
+            <Container maxWidth="xl" sx={{ height: { lg: "85vh", sm: "90vh" }, position: "relative", overflow: "hidden", display: { sm: "block", xs: "none" } }} disableGutters>
                 <Paper square sx={{ height: "100%", opacity: "0.2", width: "100%", position: "absolute", top: "0", left: "0", zIndex: "-1" }} />
                 <div className="orange-cover" style={{ width: started }}>
                     <span className="bigHello">He<br />llo</span>
@@ -66,7 +66,7 @@ const AppContent = () => {
                                 I am a passionate Web Developer who transform my Ideas into digital reality with Creativity and Technical Expertise
                             </Typography>
                             <Box sx={{ display: "flex", gap: "20px", margin: "20px 0" }}>
-                                <Button variant="contained" color="success" sx={{ width: "150px" }} startIcon={<DownloadIcon />} onClick={downloadResume}>Download CV</Button>
+                                <Button variant="contained" color="success" sx={{ width: "150px", color: "white" }} startIcon={<DownloadIcon />} onClick={downloadResume}>Download CV</Button>
                                 <Button variant="contained" color="secondary" sx={{ width: "150px", color: "white" }} startIcon={<EmailIcon />}>Message me</Button>
                             </Box>
                         </Box>
@@ -76,20 +76,30 @@ const AppContent = () => {
                     </div>
                 </div>
             </Container>
+
+            {/* Mobile View */}
+            <Container className="mob-view-header-content" maxWidth="lg" sx={{ margin: 0, display: { sm: "none", xs: "flex" }, height: "100vh", justifyContent: "center", alignItems: "flex-end" }} disableGutters>
+                <Box className="content">
+                    <Typography variant="h3">I'm</Typography>
+                    <Typography variant="h2" sx={{ fontWeight: "bold", fontSize: "2.5rem", textTransform: "uppercase", color: currentTheme.palette.primary.main }}>Archie<br />Sevillano</Typography>
+                    <Typography variant="h3" sx={{ fontSize: "2rem" }}>Full-Stack Web Developer</Typography>
+                    <Typography variant="body1" maxWidth="300px" sx={{ marginTop: "10px", fontSize: "1rem" }}>
+                        I am a passionate Web Developer who transform my Ideas into digital reality with Creativity and Technical Expertise
+                    </Typography>
+                    <Box sx={{ display: "flex", gap: "20px", margin: "20px 0", flexDirection: "column" }}>
+                        <Button variant="contained" color="success" sx={{ flexGrow: 1, fontSize: "1rem", color: "white" }} startIcon={<DownloadIcon />} onClick={downloadResume}>Download CV</Button>
+                        <Button variant="contained" color="secondary" sx={{ flexGrow: 1, color: "white", fontSize: "1rem" }} startIcon={<EmailIcon />}>Message me</Button>
+                    </Box>
+                </Box>
+                <img src={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/profile.png?alt=media&token=81b46136-89f4-4e90-bfa8-d8151b6989f7"} className="profile-pic" />
+            </Container>
+
+
             <Container maxWidth="xl">
                 <SwiperSection />
             </Container>
-            <ProjectSection />
         </main >
     );
 }
 
 export default AppContent;
-
-{/* <Box sx={{ display: "flex", flexDirection: "column" }}>
-                                {headerActions.map((item) => {
-                                    return <Button sx={{ flexGrow: 0, flexShrink: 0 }} variant="contained" startIcon={item?.icon} >
-                                        {item?.name}
-                                    </Button>
-                                })}
-                            </Box> */}

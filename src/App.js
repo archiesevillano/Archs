@@ -11,6 +11,7 @@ import Contacts from './components/Contacts/Contacts';
 import ScrollSpy from 'react-ui-scrollspy';
 import Services from './components/Services/Services';
 import Skills from './components/Skills/Skills';
+import ProjectSection from './components/ProjectSection/ProjectSection';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <AppHeader />
           <AppContent />
           <Services />
+          <ProjectSection />
           <Skills />
           <Socials />
           <AboutSection />

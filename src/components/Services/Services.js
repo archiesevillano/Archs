@@ -42,7 +42,7 @@ const Services = () => {
     }
 
     return (
-        <Container className="services-section" maxWidth="lg" >
+        <Container className="services-section" maxWidth="lg" id="services" >
             <Typography variant="h3" align="center">Services</Typography>
             <Container className="services-wrapper" sx={{ padding: { md: "30px 20px", xs: "30px 10px" }, display: "flex", flexDirection: { sm: "row", xs: "column", } }}>
                 {currentService.map((item, index) => card(icons[index], item.title, item.description))}

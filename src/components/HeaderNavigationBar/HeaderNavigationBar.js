@@ -6,9 +6,27 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { ProvideTheme } from "../../AppTheme";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const HeaderNavigationBar = () => {
-    const pages = ["Projects", "Services", "About", "Contacts"];
+    const pages = [
+        {
+            name: "Services",
+            path: "/#services",
+        },
+        {
+            name: "Projects",
+            path: "/#projects",
+        },
+        {
+            name: "About",
+            path: "/#about",
+        },
+        {
+            name: "Contacts",
+            path: "/#contacts",
+        },
+    ];
 
     const { mode, setMode } = useContext(ProvideTheme);
     const switchMode = () => {
@@ -27,14 +45,16 @@ const HeaderNavigationBar = () => {
                     <Box sx={{ justifyContent: "flex-end", flexGrow: 1, gap: "18px", display: "flex" }}>
                         <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: "18px", alignItems: "center" }}>
                             {pages.map((page) => (
-                                <Link
-
-                                    data-to-scrollspy-id={page}
-                                    key={page}
-                                    style={{ transition: "all 0.2s ease-in-out", color: currentTheme.palette.text, display: 'block', fontSize: '1.2rem', fontFamily: "DM Serif Text" }}
+                                <HashLink
+                                    smooth
+                                    to={page.path}
+                                    className="header-pages-nav-items"
+                                    data-to-scrollspy-id={page.name.toLocaleLowerCase()}
+                                    key={page.className}
+                                    style={{ textDecoration: "none", transition: "all 0.2s ease-in-out", color: currentTheme.palette.text.primary, display: 'block', fontSize: '1.2rem', fontFamily: "DM Serif Text" }}
                                 >
-                                    {page}
-                                </Link>
+                                    {page.name}
+                                </HashLink>
                             ))}
                         </Box>
                         <IconButton onClick={switchMode}>
@@ -48,7 +68,3 @@ const HeaderNavigationBar = () => {
 }
 
 export default HeaderNavigationBar;
-
-
-// Apply Styles on the header navigation bar
-// Apply Download CV

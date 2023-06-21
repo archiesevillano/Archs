@@ -6,7 +6,7 @@ const AboutSection = () => {
     const currentTheme = useTheme();
 
     return (
-        <Box sx={{ marginBottom: "50px", display: "flex", alignItems: "center", flexDirection: "column", position: "relative" }} id="About">
+        <Box sx={{ marginBottom: "50px", display: "flex", alignItems: "center", flexDirection: "column", position: "relative" }} id="about">
             <ul className="about-side-nav">
                 <li><Link to="">P1</Link></li>
                 <li><Link to="">P2</Link></li>

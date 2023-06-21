@@ -60,7 +60,7 @@ const Contacts = ({ phoneNumber, address, email }) => {
 
 
     return (
-        <footer className="appfooter" style={{ backgroundColor: currentTheme.palette.background.paper }} id="Contacts">
+        <footer className="appfooter" style={{ backgroundColor: currentTheme.palette.background.paper }} id="contacts">
             <Container maxWidth="lg" disableGutters>
                 <Box>
                     <Typography align="center" variant="h2" sx={{ fontSize: "35px" }}>ArchS.</Typography>

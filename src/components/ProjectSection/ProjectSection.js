@@ -10,8 +10,8 @@ import ProjectCard from "../ProjectCard/ProjectCard";
 const ProjectSection = () => {
 
     return (
-        <Container maxWidth="lg" sx={{ minHeight: "600px" }} id="Projects">
-            <Typography variant="h2">
+        <Container maxWidth="lg" sx={{ minHeight: "600px" }} id="projects">
+            <Typography variant="h3" align="center">
                 Projects
             </Typography>
             <Swiper
