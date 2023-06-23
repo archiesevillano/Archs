@@ -78,12 +78,12 @@ const AppContent = () => {
             </Container>
 
             {/* Mobile View */}
-            <Container className="mob-view-header-content" maxWidth="lg" sx={{ margin: 0, display: { sm: "none", xs: "flex" }, height: "100vh", justifyContent: "center", alignItems: "flex-end" }} disableGutters>
+            <Container className="mob-view-header-content" maxWidth="lg" sx={{ overflow: "hidden", margin: 0, display: { sm: "none", xs: "flex" }, height: "100vh", justifyContent: "center", alignItems: "flex-end" }} disableGutters>
                 <Box className="content">
-                    <Typography variant="h3">I'm</Typography>
+                    <Typography variant="h3" sx={{ color: "white", }}>I'm</Typography>
                     <Typography variant="h2" sx={{ fontWeight: "bold", fontSize: "2.5rem", textTransform: "uppercase", color: currentTheme.palette.primary.main }}>Archie<br />Sevillano</Typography>
-                    <Typography variant="h3" sx={{ fontSize: "2rem" }}>Full-Stack Web Developer</Typography>
-                    <Typography variant="body1" maxWidth="300px" sx={{ marginTop: "10px", fontSize: "1rem" }}>
+                    <Typography variant="h3" sx={{ fontSize: "2rem", color: "white" }}>Full-Stack Web Developer</Typography>
+                    <Typography variant="body1" maxWidth="300px" sx={{ marginTop: "10px", fontSize: "1rem", color: "white", }}>
                         I am a passionate Web Developer who transform my Ideas into digital reality with Creativity and Technical Expertise
                     </Typography>
                     <Box sx={{ display: "flex", gap: "20px", margin: "20px 0", flexDirection: "column" }}>
@@ -93,7 +93,6 @@ const AppContent = () => {
                 </Box>
                 <img src={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/profile.png?alt=media&token=81b46136-89f4-4e90-bfa8-d8151b6989f7"} className="profile-pic" />
             </Container>
-
 
             <Container maxWidth="xl">
                 <SwiperSection />
