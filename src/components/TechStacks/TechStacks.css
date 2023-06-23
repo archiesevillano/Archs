@@ -19,3 +19,13 @@
     justify-content: center;
     align-items: center;
 }
+
+.techstacks-section .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+    background-color: rgb(139, 139, 139);
+    /* Change this to a color that is visible in dark mode */
+}
+
+.techstacks-section .swiper-pagination-bullet-active {
+    background-color: var(--primary);
+    /* Change this to your desired color */
+}
