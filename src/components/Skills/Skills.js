@@ -24,9 +24,6 @@ const Skills = () => {
         const visible = data;
         setVisibleData(visible);
         setHiddenData(hiddenData);
-
-        console.log(visible);
-        console.log(data);
     }
 
     useEffect(() => {

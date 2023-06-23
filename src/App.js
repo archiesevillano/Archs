@@ -12,6 +12,7 @@ import ScrollSpy from 'react-ui-scrollspy';
 import Services from './components/Services/Services';
 import Skills from './components/Skills/Skills';
 import ProjectSection from './components/ProjectSection/ProjectSection';
+import TechStacks from './components/TechStacks/TechStacks';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Skills />
           <Socials />
           <AboutSection />
+          <TechStacks />
           <Contacts phoneNumber="(+63)956-881-0654" email="archie.sevillano29@gmail.com" address="Las Piñas City NCR, Metro Manila PH" />
         </ScrollSpy>
       </AppRoutes>

@@ -1,0 +1,21 @@
+.techstacks-section {
+    display: flex;
+    justify-content: center;
+}
+
+.techstacks-section .technologies-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.techstacks-section .technologies-slides {
+    text-align: center;
+    font-size: 18px;
+    height: 250px;
+    overflow: hidden;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

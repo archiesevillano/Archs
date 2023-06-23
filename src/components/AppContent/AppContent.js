@@ -93,10 +93,6 @@ const AppContent = () => {
                 </Box>
                 <img src={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/profile.png?alt=media&token=81b46136-89f4-4e90-bfa8-d8151b6989f7"} className="profile-pic" />
             </Container>
-
-            <Container maxWidth="xl">
-                <SwiperSection />
-            </Container>
         </main >
     );
 }

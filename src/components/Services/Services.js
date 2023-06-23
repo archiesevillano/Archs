@@ -17,7 +17,6 @@ const Services = () => {
             const data = await response.data;
             const svc = data.myservices;
 
-            console.log(svc);
             setServices(svc);
             return svc;
         } catch (error) {
@@ -42,7 +41,7 @@ const Services = () => {
     }
 
     return (
-        <Container className="services-section" maxWidth="lg" id="services" >
+        <Container className="services-section" maxWidth="lg" id="services" sx={{ marginTop: "50px" }}>
             <Typography variant="h3" align="center">Services</Typography>
             <Container className="services-wrapper" sx={{ padding: { md: "30px 20px", xs: "30px 10px" }, display: "flex", flexDirection: { sm: "row", xs: "column", } }}>
                 {currentService.map((item, index) => card(icons[index], item.title, item.description))}

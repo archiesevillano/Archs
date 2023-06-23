@@ -25,7 +25,6 @@ const HeaderNavigationBar = () => {
             return;
         }
 
-        console.log(`${anchor} and ${open}`);
         setState({ ...state, [anchor]: open });
     };
 
