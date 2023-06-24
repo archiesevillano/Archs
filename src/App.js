@@ -13,6 +13,7 @@ import Services from './components/Services/Services';
 import Skills from './components/Skills/Skills';
 import ProjectSection from './components/ProjectSection/ProjectSection';
 import TechStacks from './components/TechStacks/TechStacks';
+import CvSection from './components/CVSection/CVSection';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <AppHeader />
           <AppContent />
           <Services />
+          <CvSection />
           <ProjectSection />
           <Skills />
           <Socials />
