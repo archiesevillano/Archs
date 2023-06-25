@@ -1,10 +1,10 @@
 .projects-swiper {
     margin: 40px 0;
     max-width: 100%;
-    height: 550px;
+    height: 400px;
 }
 
-.project-swiper-slide {
+.project__swiper__slide {
     width: 300px;
     text-align: center;
     font-size: 18px;

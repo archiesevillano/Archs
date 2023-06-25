@@ -10,7 +10,7 @@ import ProjectCard from "../ProjectCard/ProjectCard";
 const ProjectSection = () => {
 
     return (
-        <Container maxWidth="lg" sx={{ minHeight: "600px" }} id="projects">
+        <Container maxWidth="lg" id="projects">
             <Typography variant="h3" align="center">
                 Projects
             </Typography>
@@ -24,26 +24,35 @@ const ProjectSection = () => {
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                 className="projects-swiper"
             >
-                <SwiperSlide className="project-swiper-slide">
-                    <ProjectCard projectImage={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Screenshot%20(550).png?alt=media&token=e47590bf-f9f5-4dae-984e-fbc84347c3d8"} projectTitle={"AirGlobe"} shortDescription={"Informative Website about Global Warming and Air Pollutants"} developmentStatus={"Underdevelopment"} />
+                <SwiperSlide className="project__swiper__slide">
+                    <ProjectCard image={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Screenshot%20(550).png?alt=media&token=e47590bf-f9f5-4dae-984e-fbc84347c3d8"} websiteTitle={"AirGlobe"} shortDescription={"Informative Website about Global Warming and Air Pollutants"} developmentStatus={"Underdevelopment"} />
                 </SwiperSlide>
-                <SwiperSlide className="project-swiper-slide">
-                    <ProjectCard projectImage={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Screenshot%20(550).png?alt=media&token=e47590bf-f9f5-4dae-984e-fbc84347c3d8"} projectTitle={"AirGlobe"} shortDescription={"Informative Website about Global Warming and Air Pollutants"} developmentStatus={"Underdevelopment"} />
+                <SwiperSlide className="project__swiper__slide">
+                    <ProjectCard image={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Screenshot%20(550).png?alt=media&token=e47590bf-f9f5-4dae-984e-fbc84347c3d8"} websiteTitle={"AirGlobe"} shortDescription={"Informative Website about Global Warming and Air Pollutants"} developmentStatus={"Underdevelopment"} />
                 </SwiperSlide>
-                <SwiperSlide className="project-swiper-slide">
-                    <ProjectCard projectImage={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Screenshot%20(550).png?alt=media&token=e47590bf-f9f5-4dae-984e-fbc84347c3d8"} projectTitle={"AirGlobe"} shortDescription={"Informative Website about Global Warming and Air Pollutants"} developmentStatus={"Underdevelopment"} />
+                <SwiperSlide className="project__swiper__slide">
+                    <ProjectCard image={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Screenshot%20(550).png?alt=media&token=e47590bf-f9f5-4dae-984e-fbc84347c3d8"} websiteTitle={"AirGlobe"} shortDescription={"Informative Website about Global Warming and Air Pollutants"} developmentStatus={"Underdevelopment"} />
                 </SwiperSlide>
-                <SwiperSlide className="project-swiper-slide">
-                    <ProjectCard projectImage={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Screenshot%20(550).png?alt=media&token=e47590bf-f9f5-4dae-984e-fbc84347c3d8"} projectTitle={"AirGlobe"} shortDescription={"Informative Website about Global Warming and Air Pollutants"} developmentStatus={"Underdevelopment"} />
+                <SwiperSlide className="project__swiper__slide">
+                    <ProjectCard image={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Screenshot%20(550).png?alt=media&token=e47590bf-f9f5-4dae-984e-fbc84347c3d8"} websiteTitle={"AirGlobe"} shortDescription={"Informative Website about Global Warming and Air Pollutants"} developmentStatus={"Underdevelopment"} />
                 </SwiperSlide>
-                <SwiperSlide className="project-swiper-slide">
-                    <ProjectCard projectImage={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Screenshot%20(550).png?alt=media&token=e47590bf-f9f5-4dae-984e-fbc84347c3d8"} projectTitle={"AirGlobe"} shortDescription={"Informative Website about Global Warming and Air Pollutants"} developmentStatus={"Underdevelopment"} />
+                <SwiperSlide className="project__swiper__slide">
+                    <ProjectCard image={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Screenshot%20(550).png?alt=media&token=e47590bf-f9f5-4dae-984e-fbc84347c3d8"} websiteTitle={"AirGlobe"} shortDescription={"Informative Website about Global Warming and Air Pollutants"} developmentStatus={"Underdevelopment"} />
                 </SwiperSlide>
-                <SwiperSlide className="project-swiper-slide">
-                    <ProjectCard projectImage={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Screenshot%20(550).png?alt=media&token=e47590bf-f9f5-4dae-984e-fbc84347c3d8"} projectTitle={"AirGlobe"} shortDescription={"Informative Website about Global Warming and Air Pollutants"} developmentStatus={"Underdevelopment"} />
+                <SwiperSlide className="project__swiper__slide">
+                    <ProjectCard image={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Screenshot%20(550).png?alt=media&token=e47590bf-f9f5-4dae-984e-fbc84347c3d8"} websiteTitle={"AirGlobe"} shortDescription={"Informative Website about Global Warming and Air Pollutants"} developmentStatus={"Underdevelopment"} />
                 </SwiperSlide>
-                <SwiperSlide className="project-swiper-slide">
-                    <ProjectCard projectImage={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Screenshot%20(550).png?alt=media&token=e47590bf-f9f5-4dae-984e-fbc84347c3d8"} projectTitle={"AirGlobe"} shortDescription={"Informative Website about Global Warming and Air Pollutants"} developmentStatus={"Underdevelopment"} />
+                <SwiperSlide className="project__swiper__slide">
+                    <ProjectCard image={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Screenshot%20(550).png?alt=media&token=e47590bf-f9f5-4dae-984e-fbc84347c3d8"} websiteTitle={"AirGlobe"} shortDescription={"Informative Website about Global Warming and Air Pollutants"} developmentStatus={"Underdevelopment"} />
+                </SwiperSlide>
+                <SwiperSlide className="project__swiper__slide">
+                    <ProjectCard image={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Screenshot%20(550).png?alt=media&token=e47590bf-f9f5-4dae-984e-fbc84347c3d8"} websiteTitle={"AirGlobe"} shortDescription={"Informative Website about Global Warming and Air Pollutants"} developmentStatus={"Underdevelopment"} />
+                </SwiperSlide>
+                <SwiperSlide className="project__swiper__slide">
+                    <ProjectCard image={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Screenshot%20(550).png?alt=media&token=e47590bf-f9f5-4dae-984e-fbc84347c3d8"} websiteTitle={"AirGlobe"} shortDescription={"Informative Website about Global Warming and Air Pollutants"} developmentStatus={"Underdevelopment"} />
+                </SwiperSlide>
+                <SwiperSlide className="project__swiper__slide">
+                    <ProjectCard image={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Screenshot%20(550).png?alt=media&token=e47590bf-f9f5-4dae-984e-fbc84347c3d8"} websiteTitle={"AirGlobe"} shortDescription={"Informative Website about Global Warming and Air Pollutants"} developmentStatus={"Underdevelopment"} />
                 </SwiperSlide>
 
             </Swiper>

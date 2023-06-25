@@ -1,24 +1,33 @@
-import { Button, Typography, useTheme } from "@mui/material";
+import { Button, Divider, Typography, useTheme, Box, Container, Paper } from "@mui/material";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import BarChartIcon from '@mui/icons-material/BarChart';
+import PublicIcon from '@mui/icons-material/Public';
+import CodeIcon from '@mui/icons-material/Code';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import "./ProjectCard.css";
 
-const ProjectCard = ({ projectImage, projectTitle, shortDescription, developmentStatus }) => {
-
-    const currentTheme = useTheme();
+// developmentStatus : completed | deployed | prototyping | underdevelopment
+const ProjectCard = ({ image, liveLink, repository, developmentStatus, websiteTitle }) => {
+    const currentTheme = useTheme;
 
     return (
-        <div className="project-card" style={{ backgroundColor: currentTheme.palette.background.paper }}>
-            <header className="header-image">
-                <img src={projectImage} className="header-image-content" />
-            </header>
-            <div className="textual-content">
-                <Typography variant="subtitle1" align="left" sx={{ marginBottom: "10px", fontSize: "14px" }}>{shortDescription}</Typography>
-                <Typography variant="h2" sx={{ fontSize: "40px" }}>{projectTitle}</Typography>
-                <Button endIcon={<ArrowRightAltIcon />}>View Project</Button>
-            </div>
-            <Typography align="left" sx={{ width: "100%", padding: "20px 0px 20px", borderTop: `1px solid ${currentTheme.palette.divider}` }}><BarChartIcon sx={{ display: "inline-block", transform: "translateY(6px)", marginRight: "5px", padding: "0 10px 0 20px" }} />{developmentStatus}</Typography>
+        <div className="projectCard">
+            <img src={image} className="project__image" alt="Image not available" />
+            <Paper className="floating__div">
+                <Box>
+                    <Typography variant="body1">{websiteTitle}</Typography>
+                    <Box>
+                        <Typography variant="body1">{developmentStatus}</Typography>
+                        <Typography variant="body1">"Lorem Sit amet"</Typography>
+                        <Typography variant="body1">"Ipsum Dolor</Typography>
+                    </Box>
+                </Box>
+                <Divider />
+                <Box>
+                    <Button variant="text" startIcon={<PublicIcon />} sx={{ marginRight: "15px" }}>Live Link</Button>
+                    <Button variant="text" startIcon={<CodeIcon />} sx={{ marginRight: "15px" }}>Repository</Button>
+                </Box>
+            </Paper>
         </div>
     );
 }
