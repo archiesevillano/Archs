@@ -1,4 +1,4 @@
-import { Typography, Container } from "@mui/material";
+import { Typography, Container, Box } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import "swiper/css";
@@ -11,9 +11,20 @@ const ProjectSection = () => {
 
     return (
         <Container maxWidth="lg" id="projects">
-            <Typography variant="h3" align="center">
-                Projects
-            </Typography>
+
+            <Box sx={{ paddingTop: "30px" }}>
+                <Box sx={{ display: "flex", justifyContent: "flex-start", alignItems: "center", marginBottom: "20px", gap: "20px" }}>
+                    <Typography variant="h3" align="left">
+                        Projects
+                    </Typography>
+                    <Typography variant="subtitle1" align="left" sx={{ opacity: "0.6" }}>
+                        15 items
+                    </Typography>
+                </Box>
+                <Typography variant="body1">
+                    These are the recent projects I have developed and added to my portfolio. Some projects are not included here either because the client didn't permit their display or they have been deleted. These projects are specifically created and intended for the viewing of clients and recruiters.
+                </Typography>
+            </Box>
             <Swiper
                 cssMode={true}
                 navigation={true}

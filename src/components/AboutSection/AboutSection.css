@@ -1,50 +1,25 @@
-.image-container,
-.cover-container {
-    height: 100%;
-    min-width: 316px;
-    max-width: 316px;
-    flex-shrink: 0;
+.archie__image {
+    box-shadow:
+        0px 0px 2.2px rgba(0, 0, 0, 0.036),
+        0px 0px 5.3px rgba(0, 0, 0, 0.054),
+        0px 0px 10px rgba(0, 0, 0, 0.066),
+        0px 0px 17.9px rgba(0, 0, 0, 0.075),
+        0px 0px 33.4px rgba(0, 0, 0, 0.083),
+        0px 0px 80px rgba(0, 0, 0, 0.09);
     position: relative;
+    display: block;
 }
 
-.image-container .archie {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: bottom;
-}
-
-.about-side-nav {
-    padding: 0;
-    position: absolute;
-    top: 240px;
-    left: -100px;
-    list-style-type: none;
-    transform: rotate(-90deg);
-}
-
-.about-side-nav li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-
-.about-side-nav li a {
-    font-family: "Kanit";
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-decoration: none;
+.about__heading__word {
     color: inherit;
-}
-
-.about-side-nav .about-name {
-    font-family: 'Josefin Sans';
+    font-size: 55px !important;
+    width: 40px;
+    font-family: 'Source Sans 3';
+    font-weight: 900 !important;
+    word-wrap: break-word;
     text-transform: uppercase;
-    font-weight: bold;
 }
 
-.about-side-nav .about-line hr {
-    width: 100px;
-    transform: translateY(-4px);
+.about__heading__word._firstLetter {
+    color: var(--primary) !important;
 }
