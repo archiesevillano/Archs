@@ -41,7 +41,7 @@ const Services = () => {
     }
 
     return (
-        <Container className="services-section" maxWidth="lg" id="services" sx={{ display: "flex", marginTop: "50px", textAlign: "center" }}>
+        <Container className="services-section" maxWidth="lg" id="services" sx={{ display: "flex", marginTop: "50px" }}>
             <Typography variant="h3" align="center" sx={{ padding: "20px" }}>Services</Typography>
             <Typography variant="subtitle1" align="center" sx={{ maxWidth: "800px" }}>
                 I specialize in creating visually appealing and well-crafted websites that are also responsive, ensuring optimal user experience across different devices and screen sizes.
