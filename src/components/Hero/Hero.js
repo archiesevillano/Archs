@@ -1,6 +1,7 @@
 import "./Hero.css";
 import { useTheme, Paper, Container, Box, Typography } from '@mui/material';
 import React, { useMemo, useState, useRef } from 'react';
+import EmailIcon from '@mui/icons-material/Email';
 
 const Hero = () => {
 
@@ -39,12 +40,18 @@ const Hero = () => {
             <Container disableGutters className="heroSection__content" sx={{ maxWidth: "95%!important", margin: "0", justifyContent: { xl: "space-center", sm: "baseline" }, alignItems: { xl: "center", sm: "center" }, flexDirection: { xl: "row", sm: "column" } }}>
                 <div className="content__left">
                     <Box>
-                        <Typography variant="subtitle1" sx={{ fontSize: "1.5rem", textTransform: "uppercase" }}>Getting To Know</Typography>
-                        <Typography variant="h3" sx={{ fontSize: "2rem" }}>Full-Stack Web Developer</Typography>
-                        <Typography variant="body1" maxWidth="300px" sx={{ marginTop: "10px", fontSize: "1rem" }}>
+                        <Typography variant="subtitle1" sx={{ fontSize: "1.5rem", textTransform: "uppercase", letterSpacing: "3px" }}>Getting To Know</Typography>
+                        <Typography variant="subtitle1" fontWeight="bold" sx={{ fontSize: "2.5rem", margin: 0 }}>Full-Stack Web Developer</Typography>
+                        <Typography variant="body1" maxWidth="300px" sx={{ fontSize: "1rem" }}>
                             I am a passionate Web Developer who transform my Ideas into digital reality with Creativity and Technical Expertise
                         </Typography>
-
+                        <button class="playstore-button" href="#">
+                            <EmailIcon className="icon" />
+                            <span class="texts">
+                                <span class="text-1">GET IN TOUCH</span>
+                                <span class="text-2">Message me</span>
+                            </span>
+                        </button>
                     </Box>
                 </div>
                 <div className="content__right">
