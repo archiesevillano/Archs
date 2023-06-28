@@ -11,8 +11,6 @@ import Axios from "axios";
 
 const AppContent = () => {
 
-
-
     const currentTheme = useTheme();
     const [hasStarted, setStartStatus] = useState(false);
     const started = useMemo(() => {
