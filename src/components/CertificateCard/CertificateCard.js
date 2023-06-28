@@ -10,20 +10,21 @@ const CertificateCard = ({ snapShotSource, issuedDate, title, issuerImage, issue
 
     return (
         <Paper square className="certificateCard">
+            <span className="date-issued">{issuedDate}</span>
             <img src={snapShotSource} alt="media" className="certificate__image" />
             <div className="__overlay">
                 <Tooltip title="View">
-                    <IconButton aria-label="View Image">
+                    <IconButton aria-label="View Image" className="overlay__btns" style={{ transitionDelay: "0.2s" }}>
                         <RemoveRedEyeIcon sx={{ color: "white" }} />
                     </IconButton>
                 </Tooltip>
                 <Tooltip title="Download">
-                    <IconButton aria-label="Download Image">
+                    <IconButton aria-label="Download Image" className="overlay__btns" style={{ transitionDelay: "0.4s" }}>
                         <DownloadIcon sx={{ color: "white" }} />
                     </IconButton>
                 </Tooltip>
                 <Tooltip title="Copy link">
-                    <IconButton aria-label="View Image">
+                    <IconButton aria-label="View Image" className="overlay__btns" style={{ transitionDelay: "0.6s" }}>
                         <LinkIcon sx={{ color: "white" }} />
                     </IconButton>
                 </Tooltip>
