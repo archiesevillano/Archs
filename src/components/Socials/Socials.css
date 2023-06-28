@@ -1,31 +1,14 @@
 .socials-list {
     list-style-type: none;
-    padding: 0;
-    position: absolute;
-    top: 45%;
-    right: 0;
     padding: 0 12px;
-}
-
-.socials-list::before {
-    content: 'Share';
-    text-transform: uppercase;
-    color: inherit;
-    position: absolute;
-    top: -50px;
-    right: -6px;
-    transform: rotate(-90deg);
-    font-weight: bold;
-    font-family: 'Josefin Sans';
-    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 14px;
+    transform: translate(5px, 10px);
 }
 
 .socials-list li {
     margin: 10px 0;
-}
-
-@media (max-width: 600px) {
-    .socials-list::before {
-        color: white;
-    }
+    display: inline-block;
 }
