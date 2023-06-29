@@ -16,14 +16,32 @@ import CvSection from './components/CVSection/CVSection';
 import CertificateSection from './components/CertificateSection/CertificateSection';
 import Hero from './components/Hero/Hero';
 import ContactForm from './components/ContactForm/ContactForm';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+
+// modal box style <ContactForm/>
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  boxShadow: 24,
+};
 
 function App() {
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <div className="App">
       <AppRoutes>
         <ScrollSpy scrollThrottle={200}>
-          <ContactForm />
-          <Hero />
+          <Hero openContact={handleOpen} />
           <Services />
           <CvSection />
           <ProjectSection />
@@ -31,6 +49,14 @@ function App() {
           <TechStacks />
           <CertificateSection />
           <Contacts phoneNumber="(+63)956-881-0654" email="archie.sevillano29@gmail.com" address="Las Piñas City NCR, Metro Manila PH" />
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <ContactForm boxStyle={style} closeAction={handleClose} />
+          </Modal>
         </ScrollSpy>
       </AppRoutes>
     </div>

@@ -4,7 +4,7 @@ import React, { useMemo, useState, useRef } from 'react';
 import EmailIcon from '@mui/icons-material/Email';
 import Socials from "../Socials/Socials";
 
-const Hero = () => {
+const Hero = ({ openContact }) => {
 
     const currentTheme = useTheme();
 
@@ -47,7 +47,7 @@ const Hero = () => {
                             I am a passionate Web Developer who transform my Ideas into digital reality with Creativity and Technical Expertise
                         </Typography>
                         <Box sx={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
-                            <button class="playstore-button" href="#">
+                            <button class="playstore-button" onClick={openContact}>
                                 <EmailIcon className="icon" />
                                 <span class="texts">
                                     <span class="text-1">GET IN TOUCH</span>
