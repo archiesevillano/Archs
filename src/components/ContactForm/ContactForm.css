@@ -1,0 +1,33 @@
+.field {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 5px;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+.inputFields {
+    outline: none;
+    font-family: inherit;
+    border: none;
+    font-weight: 500;
+    color: inherit;
+    background: none;
+}
+
+#messageField {
+    resize: none;
+    height: 100px;
+}
+
+.inputGroup__label {
+    opacity: 0.4;
+    color: inherit;
+    transition: all 0.2s ease-in-out;
+}
+
+.inputFields:focus~.inputGroup__label {
+    color: var(--primary);
+    opacity: 1;
+}

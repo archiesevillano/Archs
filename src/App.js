@@ -15,12 +15,14 @@ import TechStacks from './components/TechStacks/TechStacks';
 import CvSection from './components/CVSection/CVSection';
 import CertificateSection from './components/CertificateSection/CertificateSection';
 import Hero from './components/Hero/Hero';
+import ContactForm from './components/ContactForm/ContactForm';
 
 function App() {
   return (
     <div className="App">
       <AppRoutes>
         <ScrollSpy scrollThrottle={200}>
+          <ContactForm />
           <Hero />
           <Services />
           <CvSection />
