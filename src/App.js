@@ -41,6 +41,7 @@ function App() {
     <div className="App">
       <AppRoutes>
         <ScrollSpy scrollThrottle={200}>
+          <AppHeader />
           <Hero openContact={handleOpen} />
           <Services />
           <CvSection />

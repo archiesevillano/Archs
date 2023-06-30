@@ -28,25 +28,6 @@ const HeaderNavigationBar = () => {
         setState({ ...state, [anchor]: open });
     };
 
-    const sections = [
-        {
-            name: "Services",
-            path: "/#services",
-        },
-        {
-            name: "Projects",
-            path: "/#projects",
-        },
-        {
-            name: "About",
-            path: "/#about",
-        },
-        {
-            name: "Contacts",
-            path: "/#contacts",
-        },
-    ];
-
     const list = (anchor) => (
         <Box
             sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
@@ -57,13 +38,13 @@ const HeaderNavigationBar = () => {
             <List>
                 <Typography variant="h3" sx={{ padding: "20px", fontSize: "1.4rem" }}>
                     Menu</Typography>
-                {sections.map((navItem, index) => (
+                {/* {sections.map((navItem, index) => (
                     <ListItem key={navItem?.name} disablePadding>
                         <ListItemButton>
                             <ListItemText data-to-scrollspy-id={navItem?.name.toLowercase} component="a" href={navItem?.path} primary={navItem?.name} />
                         </ListItemButton>
                     </ListItem>
-                ))}
+                ))} */}
             </List>
         </Box>
     );
@@ -86,7 +67,7 @@ const HeaderNavigationBar = () => {
                         <Brand />
                         <Box sx={{ justifyContent: "flex-end", flexGrow: 1, gap: "18px", display: "flex" }}>
                             <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: "18px", alignItems: "center" }}>
-                                {sections.map((page) => (
+                                {/* {sections.map((page) => (
                                     <HashLink
                                         smooth
                                         to={page.path}
@@ -97,7 +78,7 @@ const HeaderNavigationBar = () => {
                                     >
                                         {page.name}
                                     </HashLink>
-                                ))}
+                                ))} */}
                             </Box>
                             <IconButton onClick={switchMode}>
                                 {mode === "dark" ? <DarkModeIcon /> : <Brightness7Icon />}

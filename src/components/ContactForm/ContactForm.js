@@ -4,11 +4,22 @@ import CloseIcon from '@mui/icons-material/Close';
 import SendIcon from '@mui/icons-material/Send';
 import { useState } from 'react';
 import { Email } from "@mui/icons-material";
+import Axios from 'axios';
 
 const ContactForm = ({ boxStyle, closeAction }) => {
 
     const currentTheme = useTheme();
     const [inputs, setInputs] = useState({});
+
+    const sendForm = async () => {
+        try {
+            const response = await Axios.post("http://localhost:3001/send-email");
+            console.log(response);
+        }
+        catch (err) {
+            console.error(err);
+        }
+    }
 
     return (
         <Container maxWidth="sm" disableGutters sx={{ ...boxStyle, overflow: "hidden", minWidth: "300px" }}>
@@ -39,7 +50,7 @@ const ContactForm = ({ boxStyle, closeAction }) => {
                 </Box>
                 <Box sx={{ display: "flex", justifyContent: "flex-end", alignItems: "center", width: "100%", gap: "5px", padding: { sm: "15px 20px", xs: "15px 0px" }, flexDirection: { sm: "row", xs: "column-reverse" } }}>
                     <Button variant="text" sx={{ width: { sm: "160px", xs: "100%" }, color: "inherit", opacity: "0.7" }} onClick={closeAction} >Cancel</Button>
-                    <Button variant="contained" sx={{ width: { sm: "160px", xs: "100%" } }} endIcon={< SendIcon />} > Send</Button>
+                    <Button variant="contained" sx={{ width: { sm: "160px", xs: "100%" } }} endIcon={< SendIcon />} onClick={sendForm}> Send</Button>
                 </Box>
             </Box>
         </Container >

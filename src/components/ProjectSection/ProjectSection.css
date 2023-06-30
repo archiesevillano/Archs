@@ -27,15 +27,19 @@
 }
 
 /* Override the arrow color */
-.projects-swiper .swiper-button-next,
-.projects-swiper .swiper-button-prev {
-    color: var(--primary);
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;
+    opacity: 0.7;
     /* Change this to your desired color */
 }
 
 /* Override the arrow background color (optional) */
-.projects-swiper .swiper-button-next::after,
-.projects-swiper .swiper-button-prev::after {
-    background-color: transparent;
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 15px;
+    background-color: #333;
+    padding: 8px 12px;
+    border-radius: 50%;
     /* Change this to your desired background color */
 }
