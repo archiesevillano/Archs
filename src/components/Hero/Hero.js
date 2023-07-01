@@ -47,7 +47,7 @@ const Hero = ({ openContact }) => {
             <div className="hero__hello_container" ref={greetingRef} onClick={handleHideGreeting}>
                 <span className="hello_container__hello">He<br />llo</span>
             </div>
-            <Container disableGutters className={`heroSection__content ${started ? "active" : ""}`} sx={{ filter: `blur(${visibility?.blur}) opacity(${visibility?.opacity})`, transition: "all 0.5s ease-in-out", maxWidth: "95%!important", margin: "0", justifyContent: { xl: "space-evenly", xs: "baseline" }, alignItems: { xl: "center", xs: "center" }, flexDirection: { xl: "row", xs: "column-reverse" } }}>
+            <Container disableGutters className={`heroSection__content ${started ? "active" : ""}`} sx={{ filter: `blur(${visibility?.blur}) opacity(${visibility?.opacity})`, transition: "all 0.5s ease-in-out", maxWidth: "95%!important", margin: "0", justifyContent: { xl: "space-evenly", xs: "baseline" }, alignItems: { xl: "center", xs: "center" }, flexDirection: { md: "row", xs: "column-reverse" } }}>
                 <div className="content__left">
                     <Box sx={{ display: "flex", justifyContent: "center", alignItems: "flex-start", flexDirection: "column" }}>
                         <Typography variant="subtitle1" sx={{ fontSize: "1.5rem", textTransform: "uppercase", letterSpacing: "3px" }}>Getting To Know</Typography>
@@ -55,8 +55,8 @@ const Hero = ({ openContact }) => {
                         <Typography variant="body1" maxWidth="300px" sx={{ fontSize: "1rem", marginTop: "5px" }}>
                             I am a passionate Web Developer who transform my Ideas into digital reality with Creativity and Technical Expertise
                         </Typography>
-                        <Box sx={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
-                            <button class="playstore-button" onClick={openContact}>
+                        <Box sx={{ display: "flex", justifyContent: "flex-start", alignItems: "center", flexWrap: "wrap" }}>
+                            <button class="getInTouch-button" onClick={openContact}>
                                 <EmailIcon className="icon" />
                                 <span class="texts">
                                     <span class="text-1">GET IN TOUCH</span>

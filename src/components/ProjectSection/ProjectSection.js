@@ -29,7 +29,7 @@ const ProjectSection = () => {
                 cssMode={true}
                 navigation={true}
                 pagination={true}
-                slidesPerView={3}
+                slidesPerView={1}
                 mousewheel={true}
                 keyboard={true}
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}

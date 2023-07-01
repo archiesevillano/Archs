@@ -71,6 +71,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    box-sizing: border-box;
 }
 
 .heroSection .heroSection__content .content__left {
@@ -130,7 +131,7 @@
 
 /* Button */
 
-.playstore-button {
+.getInTouch-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -143,20 +144,21 @@
     transition: all .2s ease;
     text-decoration: none;
     margin-top: 20px;
+    flex-shrink: 0;
 }
 
-.playstore-button:hover {
+.getInTouch-button:hover {
     filter: invert(1);
     color: rgba(0, 0, 0, 1);
 }
 
-.playstore-button span,
-.playstore-button .icon {
+.getInTouch-button span,
+.getInTouch-button .icon {
     color: rgba(255, 255, 255, 1) !important;
 }
 
-.playstore-button:hover span,
-.playstore-button:hover .icon {
+.getInTouch-button:hover span,
+.getInTouch-button:hover .icon {
     filter: invert(0.1) !important;
 }
 
@@ -183,12 +185,47 @@
     font-weight: 600;
 }
 
+@media (max-width: 900px) {
+
+    .heroSection .heroSection__content .content__left,
+    .heroSection .heroSection__content .content__right {
+        height: 50%;
+        width: 100%;
+    }
+
+    .heroSection .heroSection__content .content__left {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
 @media (max-width: 800px) {
+
+    .heroSection .heroSection__content .content__left {
+        padding-left: 40px;
+    }
+
     .heroSection .heroSection__content .content__right::before {
         font-size: 3rem;
     }
 
     .heroSection .heroSection__content .content__right::after {
         font-size: 3rem;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .heroSection .heroSection__content .content__left {
+        padding: 10px;
+        justify-content: flex-start;
+    }
+
+    .heroSection .heroSection__content .content__right::before {
+        font-size: 2rem;
+    }
+
+    .heroSection .heroSection__content .content__right::after {
+        font-size: 2rem;
     }
 }

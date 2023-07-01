@@ -41,12 +41,12 @@ const Services = () => {
     }
 
     return (
-        <Container className="services-section" maxWidth="lg" id="services" sx={{ display: "flex", marginTop: "50px" }}>
+        <Container className="services-section" maxWidth="lg" id="services" sx={{ display: "flex", marginTop: "50px", marginBottom: { md: "50px", xs: "0px" } }}>
             <Typography variant="h3" align="center" sx={{ padding: "20px" }}>Services</Typography>
             <Typography variant="subtitle1" align="center" sx={{ maxWidth: "800px" }}>
                 I specialize in creating visually appealing and well-crafted websites that are also responsive, ensuring optimal user experience across different devices and screen sizes.
             </Typography>
-            <Container className="services-wrapper" sx={{ padding: { md: "30px 20px", xs: "30px 10px" }, display: "flex", flexDirection: { sm: "row", xs: "column", } }}>
+            <Container className="services-wrapper" sx={{ padding: { md: "30px 20px", xs: "50px 10px" }, display: "flex", flexDirection: { sm: "row", xs: "column", } }}>
                 {currentService.map((item, index) => card(icons[index], item.title, item.description))}
             </Container>
         </Container>

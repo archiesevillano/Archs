@@ -43,3 +43,11 @@
     border-radius: 50%;
     /* Change this to your desired background color */
 }
+
+@media (max-width: 500px) {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}

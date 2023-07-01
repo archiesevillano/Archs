@@ -21,6 +21,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import { Divider } from '@mui/material';
 
 // modal box style <ContactForm/>
 const style = {
@@ -44,11 +45,12 @@ function App() {
           <AppHeader />
           <Hero openContact={handleOpen} />
           <Services />
-          <CvSection />
+          <Divider />
           <ProjectSection />
-          <AboutSection />
+          {/* <AboutSection />
           <TechStacks />
           <CertificateSection />
+          <CvSection />
           <Contacts phoneNumber="(+63)956-881-0654" email="archie.sevillano29@gmail.com" address="Las Piñas City NCR, Metro Manila PH" />
           <Modal
             open={open}
@@ -57,7 +59,7 @@ function App() {
             aria-describedby="modal-modal-description"
           >
             <ContactForm boxStyle={style} closeAction={handleClose} />
-          </Modal>
+          </Modal> */}
         </ScrollSpy>
       </AppRoutes>
     </div>
