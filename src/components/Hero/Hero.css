@@ -82,24 +82,40 @@
     position: absolute;
     content: 'Archie';
     bottom: 40%;
-    right: 50%;
+    right: 0%;
     color: inherit;
     font-weight: 900;
     font-size: 5rem;
     text-transform: uppercase;
     z-index: -1;
+    opacity: 0;
+    transition: all 0.8s ease-in;
+    transition-delay: 0.9s;
 }
 
 .heroSection .heroSection__content .content__right::after {
     position: absolute;
     content: 'Sevillano';
     top: 60%;
-    left: 30%;
+    left: 0%;
     color: inherit;
     font-weight: 900;
     font-size: 5rem;
     text-transform: uppercase;
     z-index: -1;
+    opacity: 0;
+    transition: all 0.8s ease-in;
+    transition-delay: 0.9s;
+}
+
+.heroSection .heroSection__content.active .content__right::before {
+    right: 50%;
+    opacity: 1;
+}
+
+.heroSection .heroSection__content.active .content__right::after {
+    left: 30%;
+    opacity: 1;
 }
 
 .heroSection .heroSection__content .content__right .right__pic {

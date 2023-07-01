@@ -1,6 +1,6 @@
 import "./Hero.css";
 import { useTheme, Paper, Container, Box, Typography } from '@mui/material';
-import React, { useMemo, useState, useRef } from 'react';
+import React, { useMemo, useState, useRef, useEffect } from 'react';
 import EmailIcon from '@mui/icons-material/Email';
 import Socials from "../Socials/Socials";
 
@@ -10,35 +10,44 @@ const Hero = ({ openContact }) => {
 
     //determines if the user has began to open the portfolio
     const [started, start] = useState(false);
-    const alreadyStarted = useMemo(() => {
-        return started;
+    const [visibility, setVisibility] = useState({ blur: "12px", opacity: "0.3" });
+    useEffect(() => {
+        // blurry effect when the portfolio hasn't opened or started yet
+        if (started == true) {
+            setVisibility({ blur: "0", opacity: "1" });
+            console.log("opened");
+        }
+        else {
+            setVisibility({ blur: "12px", opacity: "0.3" });
+            console.log("closed");
+        }
     }, [started]);
 
     const greetingRef = useRef(null); //greeting div container ref
 
 
     //hide 'Hello Greeting Div'
-    const toggleGreeting = () => {
+    const handleHideGreeting = () => {
 
         const element = greetingRef.current;
 
-        if (!alreadyStarted) {
+        if (!started) {
             element.style.filter = "blur(10px)";
             element.style.opacity = "0";
             setTimeout(() => {
                 element.style.display = "none";
             }, 2000);
-            console.log(greetingRef.current);
+            start(true);
         }
     }
 
     return (
-        <div className="heroSection">
+        <div className="heroSection" id="get-started">
             <Paper sx={{ width: "95%", height: "90%", position: "absolute", background: currentTheme.palette.background.paper, top: "50%", left: "50%", zIndex: "-1", transform: "translate(-50%, -50%)", opacity: "0.4" }} />
-            <div className="hero__hello_container" ref={greetingRef} onClick={toggleGreeting}>
+            <div className="hero__hello_container" ref={greetingRef} onClick={handleHideGreeting}>
                 <span className="hello_container__hello">He<br />llo</span>
             </div>
-            <Container disableGutters className="heroSection__content" sx={{ maxWidth: "95%!important", margin: "0", justifyContent: { xl: "space-evenly", sm: "baseline" }, alignItems: { xl: "center", sm: "center" }, flexDirection: { xl: "row", sm: "column" } }}>
+            <Container disableGutters className={`heroSection__content ${started ? "active" : ""}`} sx={{ filter: `blur(${visibility?.blur}) opacity(${visibility?.opacity})`, transition: "all 0.5s ease-in-out", maxWidth: "95%!important", margin: "0", justifyContent: { xl: "space-evenly", sm: "baseline" }, alignItems: { xl: "center", sm: "center" }, flexDirection: { xl: "row", sm: "column" } }}>
                 <div className="content__left">
                     <Box sx={{ display: "flex", justifyContent: "center", alignItems: "flex-start", flexDirection: "column" }}>
                         <Typography variant="subtitle1" sx={{ fontSize: "1.5rem", textTransform: "uppercase", letterSpacing: "3px" }}>Getting To Know</Typography>

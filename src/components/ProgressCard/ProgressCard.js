@@ -3,6 +3,7 @@ import "./ProgressCard.css";
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import LinearProgress from '@mui/material/LinearProgress';
+import ProgressDonut from "../ProgressDonut/ProgressDonut";
 
 function LinearProgressWithLabel(props) {
     return (
@@ -39,7 +40,7 @@ const ProgressCard = ({ cardImage, cardTitle, value }) => {
                 padding: 2,
             }}>{cardTitle}</Typography>
             <Container sx={{ width: '100%', position: "absolute", bottom: 0, left: 0, padding: "20px" }} className="progress-value">
-                <LinearProgressWithLabel value={value} />
+                <ProgressDonut progressVal={value} />
             </Container>
         </Paper>
     );

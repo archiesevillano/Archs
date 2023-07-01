@@ -17,7 +17,8 @@ const TechStacks = () => {
         try {
             // request data from expressjs to firebase
             const newList = await Axios.get("http://localhost:3001/technologies");
-
+            const sortedStacks = newList?.data.sort((a, b) => b.proficiency - a.proficiency);
+            console.log(sortedStacks);
             //set the response data
             //generate components using the data
             setList(

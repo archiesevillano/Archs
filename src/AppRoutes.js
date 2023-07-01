@@ -2,7 +2,40 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import Hero from "./components/Hero/Hero";
+import Services from "./components/Services/Services";
+import ProjectSection from "./components/ProjectSection/ProjectSection";
+import AboutSection from "./components/AboutSection/AboutSection";
+import Contacts from "./components/Contacts/Contacts";
 
+
+export const sections = [
+    {
+        name: "Get Started",
+        path: "/#get-started",
+        child: <Hero />,
+    },
+    {
+        name: "Services",
+        path: "/#services",
+        child: <Services />,
+    },
+    {
+        name: "Projects",
+        path: "/#projects",
+        child: <ProjectSection />,
+    },
+    {
+        name: "About",
+        path: "/#about",
+        child: <AboutSection />,
+    },
+    {
+        name: "Contacts",
+        path: "/#contacts",
+        child: <Contacts />,
+    },
+];
 
 export const socialLinks = [
     {
@@ -27,7 +60,7 @@ const AppRoutes = ({ children }) => {
         <Router>
             {children}
             <Routes>
-                <Route path="/" />
+                {sections.map(item => <Route exact path={item?.path} component={item?.child} />)}
             </Routes>
         </Router>
     );

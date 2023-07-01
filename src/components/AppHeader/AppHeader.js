@@ -7,25 +7,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { ProvideTheme } from "../../AppTheme";
 import { HashLink } from "react-router-hash-link";
 import { Menu } from "@mui/icons-material";
-
-const sections = [
-    {
-        name: "Services",
-        path: "/#services",
-    },
-    {
-        name: "Projects",
-        path: "/#projects",
-    },
-    {
-        name: "About",
-        path: "/#about",
-    },
-    {
-        name: "Contacts",
-        path: "/#contacts",
-    },
-];
+import { sections } from "../../AppRoutes";
 
 const AppHeader = () => {
 
@@ -46,7 +28,7 @@ const AppHeader = () => {
             </Link>
         </Box>
         <ul className="topnav-list">
-            {sections.map(item => <li><Link to={item?.path}>{item?.name}</Link></li>)}
+            {sections.map(item => <li><HashLink smooth to={item?.path}>{item?.name}</HashLink></li>)}
             <li>
                 <IconButton onClick={switchMode}>
                     {mode === "dark" ? <DarkModeIcon /> : <Brightness7Icon />}

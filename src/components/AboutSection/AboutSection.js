@@ -66,7 +66,7 @@ const AboutSection = () => {
     // );
 
     return (
-        <Container maxWidth="lg" sx={{ display: "flex", justifyContent: "space-evenly", alignItems: "center" }}>
+        <Container id="about" maxWidth="lg" sx={{ display: "flex", justifyContent: "space-evenly", alignItems: "center" }}>
             <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", gap: "30px", padding: "20px" }}>
                 <Typography variant="subtitle1" maxWidth="sm">
                     I am a passionate and driven web developer with a strong focus on transforming ideas into engaging digital experiences. With a blend of creativity and technical expertise, I strive to bring imagination to life through well-crafted websites and applications.
