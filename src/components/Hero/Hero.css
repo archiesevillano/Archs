@@ -182,3 +182,13 @@
 .text-2 {
     font-weight: 600;
 }
+
+@media (max-width: 800px) {
+    .heroSection .heroSection__content .content__right::before {
+        font-size: 3rem;
+    }
+
+    .heroSection .heroSection__content .content__right::after {
+        font-size: 3rem;
+    }
+}

@@ -47,12 +47,12 @@ const Hero = ({ openContact }) => {
             <div className="hero__hello_container" ref={greetingRef} onClick={handleHideGreeting}>
                 <span className="hello_container__hello">He<br />llo</span>
             </div>
-            <Container disableGutters className={`heroSection__content ${started ? "active" : ""}`} sx={{ filter: `blur(${visibility?.blur}) opacity(${visibility?.opacity})`, transition: "all 0.5s ease-in-out", maxWidth: "95%!important", margin: "0", justifyContent: { xl: "space-evenly", sm: "baseline" }, alignItems: { xl: "center", sm: "center" }, flexDirection: { xl: "row", sm: "column" } }}>
+            <Container disableGutters className={`heroSection__content ${started ? "active" : ""}`} sx={{ filter: `blur(${visibility?.blur}) opacity(${visibility?.opacity})`, transition: "all 0.5s ease-in-out", maxWidth: "95%!important", margin: "0", justifyContent: { xl: "space-evenly", xs: "baseline" }, alignItems: { xl: "center", xs: "center" }, flexDirection: { xl: "row", xs: "column-reverse" } }}>
                 <div className="content__left">
                     <Box sx={{ display: "flex", justifyContent: "center", alignItems: "flex-start", flexDirection: "column" }}>
                         <Typography variant="subtitle1" sx={{ fontSize: "1.5rem", textTransform: "uppercase", letterSpacing: "3px" }}>Getting To Know</Typography>
-                        <Typography variant="subtitle1" fontWeight="bold" sx={{ fontSize: "2.5rem", margin: 0 }}>Full-Stack Web Developer</Typography>
-                        <Typography variant="body1" maxWidth="300px" sx={{ fontSize: "1rem" }}>
+                        <Typography variant="subtitle1" fontWeight="bold" sx={{ fontSize: "2.5rem", margin: 0, lineHeight: "100%" }}>Full-Stack Web Developer</Typography>
+                        <Typography variant="body1" maxWidth="300px" sx={{ fontSize: "1rem", marginTop: "5px" }}>
                             I am a passionate Web Developer who transform my Ideas into digital reality with Creativity and Technical Expertise
                         </Typography>
                         <Box sx={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>

@@ -62,9 +62,16 @@ const Contacts = ({ phoneNumber, address, email }) => {
     return (
         <footer className="appfooter" style={{ backgroundColor: currentTheme.palette.background.paper }} id="contacts">
             <Container maxWidth="lg" disableGutters>
-                <Box>
-                    <Typography align="center" variant="h2" sx={{ fontSize: "35px" }}>ArchS.</Typography>
-                    <Typography color="primary" align="center" variant="h2" sx={{ fontSize: "18px", textTransform: "uppercase" }}>Portfolio</Typography>
+                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <img style={{ width: "75px", height: "75px" }} src={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/archs.svg?alt=media&token=877a5271-feee-4ef0-b6ed-efbc205d52b4"} alt="logo" />
+                    <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center" }}>
+                        <Typography fontSize="1.5rem" fontWeight="bold">
+                            Archs
+                        </Typography>
+                        <Typography sx={{ transform: "translateY(-10px)", display: "inline-block" }}>
+                            Portfolio
+                        </Typography>
+                    </Box>
                 </Box>
                 <Container maxWidth="xl" sx={{ display: "flex", flexDirection: { sm: "row", xs: "column" }, justifyContent: "space-evenly", alignItems: "center", gap: "30px" }}>
                     <Box maxWidth="sm">
@@ -172,8 +179,8 @@ const Contacts = ({ phoneNumber, address, email }) => {
                 </Container>
             </Container>
             <Container maxWidth="lg" disableGutters sx={{ marginTop: "30px" }}>
-                <Typography align="center" variant="subtitle1">Website Portfolio</Typography>
                 <Typography align="center" variant="subtitle1">Copyright &copy; 2023 Archie Cedeño Sevillano</Typography>
+                <Typography align="center" variant="subtitle1">Website Portfolio</Typography>
             </Container>
             <Snackbar
                 open={open}

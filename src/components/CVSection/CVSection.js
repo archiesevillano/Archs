@@ -26,8 +26,8 @@ const CvSection = () => {
     }
 
     return (
-        <Container sx={{ maxWidth: "100%!important", margin: 0, height: "50vh", display: "flex", justifyContent: "space-evenly", alignItems: "center", backgroundColor: currentTheme.palette.primary.main, background: "linear-gradient(13deg, rgba(233,94,59,1) 19%, rgba(236,166,148,1) 100%)" }} disableGutters>
-            <Box sx={{ maxWidth: "500px", minWidth: "300px", flexGrow: 1, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "flex-start" }}>
+        <Container sx={{ maxWidth: "100%!important", margin: 0, height: "50vh", display: "flex", flexDirection: { xl: "row", xs: "column" }, justifyContent: "space-evenly", alignItems: "center", backgroundColor: currentTheme.palette.primary.main, background: "linear-gradient(13deg, rgba(233,94,59,1) 19%, rgba(236,166,148,1) 100%)" }} disableGutters>
+            <Box sx={{ maxWidth: "500px", minWidth: "300px", flexGrow: { xl: 1, xs: 0 }, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "flex-start", padding: "20px" }}>
                 <Typography variant="subtitle1" sx={{ fontSize: "1.4rem", fontWeight: "bold", color: "black", opacity: "0.9", transform: "translateY(10px)" }}>Are you a recruiter?</Typography>
                 <Typography variant="subtitle1" sx={{ fontSize: "2rem", fontWeight: "bold" }}>Download my latest CV</Typography>
                 <Typography variant="body1" fontSize="0.8rem" sx={{ color: "white" }}>
