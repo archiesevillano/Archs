@@ -46,6 +46,6 @@ body::-webkit-scrollbar-track {
 }
 
 html {
-  scroll-padding-top: 120px;
+  scroll-padding-top: 5%;
   /* height of your navbar */
 }

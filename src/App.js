@@ -40,7 +40,7 @@ function App() {
   return (
     <div className="App">
       <AppRoutes>
-        <ScrollSpy scrollThrottle={200}>
+        <ScrollSpy scrollThrottle={100}>
           <AppHeader />
           <Hero openContact={handleOpen} />
           <Services />

@@ -10,6 +10,18 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5s ease-in-out;
+    padding: 0 60px !important;
+    background: none;
+    box-sizing: border-box !important;
+    margin: 0;
+}
+
+.app-header.active {
+    height: 10%;
+    padding: 20px 60px !important;
+    background: var(--secondary);
+    color: white !important;
 }
 
 .app-header .app-logo {
