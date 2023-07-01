@@ -7,11 +7,26 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import ProgressCard from "../ProgressCard/ProgressCard";
-import { Container, Tooltip } from "@mui/material";
+import { Container, Tooltip, useMediaQuery } from "@mui/material";
 
 const TechStacks = () => {
 
     const [list, setList] = useState([]);
+    const screenWidth = window.screen.width;
+    const [fitCardCount, setFitCardCount] = useState(1);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setFitCardCount(Math.floor(screenWidth / 250));
+        };
+        console.log(fitCardCount);
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const getData = async () => {
         try {
@@ -45,7 +60,7 @@ const TechStacks = () => {
                 keyboard={true}
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                 className="technologies-swiper"
-                slidesPerView={4}
+                slidesPerView={window.screen.width > 1100 ? 4 : fitCardCount}
             >
                 {list}
             </Swiper >

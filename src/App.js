@@ -47,9 +47,9 @@ function App() {
           <Services />
           <Divider />
           <ProjectSection />
-          {/* <AboutSection />
+          <AboutSection />
           <TechStacks />
-          <CertificateSection />
+          {/* <CertificateSection />
           <CvSection />
           <Contacts phoneNumber="(+63)956-881-0654" email="archie.sevillano29@gmail.com" address="Las Piñas City NCR, Metro Manila PH" />
           <Modal

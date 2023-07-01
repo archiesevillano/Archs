@@ -6,9 +6,16 @@
     height: 100%;
     gap: 14px;
     transform: translate(5px, 10px);
+    transition: all 0.5s ease-in-out;
 }
 
 .socials-list li {
     margin: 10px 0;
     display: inline-block;
+}
+
+@media (max-width: 357px) {
+    .socials-list {
+        transform: translateY(-30px);
+    }
 }

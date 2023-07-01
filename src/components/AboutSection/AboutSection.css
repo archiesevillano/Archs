@@ -13,13 +13,12 @@
 .about__heading__word {
     color: inherit;
     font-size: 55px !important;
-    width: 40px;
     font-family: 'Source Sans 3';
     font-weight: 900 !important;
     word-wrap: break-word;
     text-transform: uppercase;
 }
 
-.about__heading__word._firstLetter {
+.about__heading__word::first-letter {
     color: var(--primary) !important;
 }

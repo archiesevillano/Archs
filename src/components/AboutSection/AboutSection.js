@@ -68,32 +68,21 @@ const AboutSection = () => {
     return (
         <Container id="about" maxWidth="lg" sx={{ display: "flex", justifyContent: "space-evenly", alignItems: "center", flexDirection: { lg: "row", sm: "column-reverse", xs: "column-reverse" } }}>
             <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", gap: "30px", padding: "20px" }}>
-                <Typography variant="subtitle1" maxWidth="sm">
+                <Typography variant="subtitle1" maxWidth="sm" align="justify">
                     I am a passionate and driven web developer with a strong focus on transforming ideas into engaging digital experiences. With a blend of creativity and technical expertise, I strive to bring imagination to life through well-crafted websites and applications.
                 </Typography>
-                <Typography variant="subtitle1" maxWidth="sm">
+                <Typography variant="subtitle1" maxWidth="sm" align="justify">
                     I am deeply passionate about web development and continuously seek opportunities to enhance my skills and stay updated with the latest industry trends. My journey in the field has equipped me with a solid foundation in front-end development, including proficiency in HTML, CSS, and JavaScript. I am also experienced in leveraging popular frameworks such as Bootstrap and have explored back-end development using PHP and Node.js.
                 </Typography>
-                <Typography variant="subtitle1" maxWidth="sm">
+                <Typography variant="subtitle1" maxWidth="sm" align="justify">
                     What sets me apart is my unwavering commitment to delivering excellence in every project I undertake. I approach each task with meticulous attention to detail and a strong eye for aesthetics, ensuring that the end result not only meets but exceeds expectations.
                 </Typography>
             </Box>
             <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", position: "relative" }}>
-                <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" }}>
-                    <Typography variant="body1" className="about__heading__word _firstLetter">a</Typography>
-                    <Typography variant="body1" className="about__heading__word">b</Typography>
-                    <Typography variant="body1" className="about__heading__word">o</Typography>
-                    <Typography variant="body1" className="about__heading__word">u</Typography>
-                    <Typography variant="body1" className="about__heading__word">t</Typography>
+                <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", zIndex: "1" }}>
+                    <Typography variant="body1" className="about__heading__word">about</Typography>
                 </Box>
-                <img src={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/TechStacks%2Fmee.png?alt=media&token=2c05d600-9004-40dd-a650-3249086fe212"} className="archie__image" style={{ border: "8px solid white", pointerEvents: "none", maxWidth: "200px", height: "auto", objectFit: "contain" }} />
-                <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column-reverse", alignItems: "center" }}>
-                    <Typography variant="body1" className="about__heading__word _firstLetter">a</Typography>
-                    <Typography variant="body1" className="about__heading__word">r</Typography>
-                    <Typography variant="body1" className="about__heading__word">c</Typography>
-                    <Typography variant="body1" className="about__heading__word">h</Typography>
-                    <Typography variant="body1" className="about__heading__word">s</Typography>
-                </Box>
+                <img src={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/TechStacks%2Fmee.png?alt=media&token=2c05d600-9004-40dd-a650-3249086fe212"} className="archie__image" style={{ border: "8px solid white", pointerEvents: "none", maxWidth: "200px", height: "auto", objectFit: "contain", opacity: "0.7", transform: "rotate(5deg)", filter: "blur(3px)" }} />
             </Box>
         </Container>
     )
