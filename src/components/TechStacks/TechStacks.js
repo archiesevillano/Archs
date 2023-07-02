@@ -3,17 +3,18 @@ import Axios from 'axios';
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/free-mode";
+import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+import { Navigation, Pagination, Mousewheel, Keyboard, EffectCoverflow } from "swiper";
 import ProgressCard from "../ProgressCard/ProgressCard";
-import { Container, Tooltip, useMediaQuery } from "@mui/material";
+import { Container, Tooltip, useMediaQuery, Typography, useTheme } from "@mui/material";
 
 const TechStacks = () => {
 
     const [list, setList] = useState([]);
     const screenWidth = window.screen.width;
     const [fitCardCount, setFitCardCount] = useState(1);
+    const currentTheme = useTheme();
 
     useEffect(() => {
         const handleResize = () => {
@@ -52,15 +53,25 @@ const TechStacks = () => {
 
     return (
         <Container maxWidth="lg" disableGutters className="techstacks-section">
+            <Typography variant="h3" align="center">Technologies</Typography>
+            <Typography variant="body1" align="center" sx={{ opacity: "0.9" }}>
+                These are the technologies I am familiar with.
+            </Typography>
             <Swiper
-                cssMode={true}
-                navigation={true}
-                pagination={true}
-                mousewheel={true}
-                keyboard={true}
-                modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                className="technologies-swiper"
+                effect={"coverflow"}
+                grabCursor={true}
+                centeredSlides={true}
                 slidesPerView={window.screen.width > 1100 ? 4 : fitCardCount}
+                coverflowEffect={{
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                }}
+                pagination={true}
+                modules={[EffectCoverflow, Pagination]}
+                className="mySwiper"
             >
                 {list}
             </Swiper >

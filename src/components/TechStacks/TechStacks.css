@@ -1,6 +1,11 @@
 .techstacks-section {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 60px 0;
+    max-width: 100% !Important;
 }
 
 .techstacks-section .technologies-swiper {
@@ -20,12 +25,6 @@
     align-items: center;
 }
 
-.techstacks-section .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
-    background-color: rgb(139, 139, 139);
-    /* Change this to a color that is visible in dark mode */
-}
-
-.techstacks-section .swiper-pagination-bullet-active {
-    background-color: var(--primary);
-    /* Change this to your desired color */
+.techstacks-section .swiper-pagination-bullet {
+    display: none;
 }

@@ -5,6 +5,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 15px;
+    flex-shrink: 0;
 }
 
 .progress-card .card-image {
