@@ -26,15 +26,15 @@ const CvSection = () => {
     }
 
     return (
-        <Container sx={{ maxWidth: "100%!important", margin: 0, height: "50vh", display: "flex", flexDirection: { xl: "row", xs: "column" }, justifyContent: "space-evenly", alignItems: "center", backgroundColor: currentTheme.palette.primary.main, background: "linear-gradient(13deg, rgba(233,94,59,1) 19%, rgba(236,166,148,1) 100%)" }} disableGutters>
+        <Container sx={{ maxWidth: "100%!important", margin: 0, height: "70vh", display: "flex", flexDirection: { xl: "row", md: "row", xs: "column" }, justifyContent: "space-evenly", alignItems: "center", backgroundColor: currentTheme.palette.primary.main, background: "linear-gradient(13deg, rgba(233,94,59,1) 19%, rgba(236,166,148,1) 100%)" }} disableGutters>
             <Box sx={{ maxWidth: "500px", minWidth: "300px", flexGrow: { xl: 1, xs: 0 }, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "flex-start", padding: "20px" }}>
                 <Typography variant="subtitle1" sx={{ fontSize: "1.4rem", fontWeight: "bold", color: "black", opacity: "0.9", transform: "translateY(10px)" }}>Are you a recruiter?</Typography>
-                <Typography variant="subtitle1" sx={{ fontSize: "2rem", fontWeight: "bold" }}>Download my latest CV</Typography>
-                <Typography variant="body1" fontSize="0.8rem" sx={{ color: "white" }}>
+                <Typography variant="subtitle1" sx={{ fontSize: "3rem", fontWeight: "bold", lineHeight: "115%", margin: "10px 0" }}>Download my latest CV</Typography>
+                <Typography variant="body1" fontSize="1rem" sx={{ color: "white" }}>
                     Review and obtain the latest version of my CV.  I am excited to discuss further how my skills can bring value to your organization.
                 </Typography>
             </Box>
-            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", gap: "20px" }}>
+            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", gap: "20px", minWidth: "300px" }}>
                 <Button variant="outlined" onClick={downloadResume} className="download__button" sx={{ width: "250px", borderColor: "white", color: "white", backgroundColor: "var(--secondary)" }}  >
                     <Download sx={{ marginRight: "15px", fontSize: "40px" }} />
                     <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "flex-start" }}>

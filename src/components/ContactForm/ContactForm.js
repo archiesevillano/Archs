@@ -22,7 +22,7 @@ const ContactForm = ({ boxStyle, closeAction }) => {
     }
 
     return (
-        <Container maxWidth="sm" disableGutters sx={{ ...boxStyle, overflow: "hidden", minWidth: "300px", margin: "0 20px" }}>
+        <Container maxWidth="sm" disableGutters sx={{ ...boxStyle, overflow: "hidden", minWidth: "300px", margin: "0 20px", margin: 0 }}>
             <IconButton onClick={closeAction} sx={{ position: "absolute", right: "0", top: "0", margin: "10px" }}>
                 <CloseIcon />
             </IconButton>

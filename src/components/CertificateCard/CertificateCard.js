@@ -1,4 +1,4 @@
-import { Container, Divider, Paper, Typography, Box, Tooltip } from "@mui/material";
+import { Container, Divider, Paper, Typography, Box, Tooltip, useMediaQuery } from "@mui/material";
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import DownloadIcon from '@mui/icons-material/Download';
 import LinkIcon from '@mui/icons-material/Link';
@@ -8,8 +8,10 @@ import "./CertificateCard.css";
 
 const CertificateCard = ({ snapShotSource, issuedDate, title, issuerImage, issuerName }) => {
 
+    const medq = useMediaQuery('(max-width: 400px)');
+
     return (
-        <Paper square className="certificateCard">
+        <Paper square className="certificateCard" sx={{ marginBottom: medq ? "130px" : "100px", width: medq ? "300px" : "350px" }}>
             <span className="date-issued">{issuedDate}</span>
             <img src={snapShotSource} alt="media" className="certificate__image" />
             <div className="__overlay">
@@ -29,7 +31,7 @@ const CertificateCard = ({ snapShotSource, issuedDate, title, issuerImage, issue
                     </IconButton>
                 </Tooltip>
             </div>
-            <div className="certificateCard__details">
+            <div className="certificateCard__details" style={{ bottom: medq ? "-105px" : "-90px" }}>
                 <div className="issuer__container">
                     <img src={issuerImage} alt="media" style={{ borderRadius: "50%", width: "50px", height: "50px" }} />
                 </div>

@@ -30,6 +30,7 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   boxShadow: 24,
+  boxSizing: "border-box",
 };
 
 function App() {
@@ -44,12 +45,12 @@ function App() {
         <ScrollSpy scrollThrottle={100}>
           <AppHeader />
           <Hero openContact={handleOpen} />
+          <AboutSection />
           <Services />
           <Divider />
           <ProjectSection />
-          <AboutSection />
           <TechStacks />
-          {/* <CertificateSection />
+          <CertificateSection />
           <CvSection />
           <Contacts phoneNumber="(+63)956-881-0654" email="archie.sevillano29@gmail.com" address="Las Piñas City NCR, Metro Manila PH" />
           <Modal
@@ -57,9 +58,10 @@ function App() {
             onClose={handleClose}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
+            sx={{ margin: 0, boxSizing: "border-box!important" }}
           >
             <ContactForm boxStyle={style} closeAction={handleClose} />
-          </Modal> */}
+          </Modal>
         </ScrollSpy>
       </AppRoutes>
     </div>

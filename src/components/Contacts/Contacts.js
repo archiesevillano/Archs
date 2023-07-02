@@ -1,4 +1,4 @@
-import { Container, Box, IconButton, Typography, useTheme, Snackbar, Button } from "@mui/material";
+import { Container, Box, IconButton, Typography, useTheme, Snackbar, Button, useMediaQuery } from "@mui/material";
 import React, { useState } from 'react';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
@@ -13,6 +13,7 @@ const Contacts = ({ phoneNumber, address, email }) => {
     const [open, setOpen] = useState(false);
     const [barMessage, setBarMessage] = useState("Done");
     const currentTheme = useTheme();
+    const medq = useMediaQuery('(max-width: 764px)');
 
     const handleCopy = item => {
 
@@ -73,9 +74,9 @@ const Contacts = ({ phoneNumber, address, email }) => {
                         </Typography>
                     </Box>
                 </Box>
-                <Container maxWidth="xl" sx={{ display: "flex", flexDirection: { sm: "row", xs: "column" }, justifyContent: "space-evenly", alignItems: "center", gap: "30px" }}>
+                <Container maxWidth="xl" sx={{ display: "flex", flexDirection: medq ? "column" : "row", justifyContent: medq ? "center" : "space-evenly", alignItems: "center", gap: "30px" }}>
                     <Box maxWidth="sm">
-                        <ul className="contact-details-list">
+                        <ul className="contact-details-list" >
                             <li>
                                 <Container sx={{ maxWidth: "100%", display: "flex", alignItems: "center", gap: "10px" }}>
                                     <Box>
@@ -127,7 +128,7 @@ const Contacts = ({ phoneNumber, address, email }) => {
                         </ul>
                     </Box>
                     <Box>
-                        <Typography variant="h3" sx={{ fontSize: "25px", marginBottom: "10px" }}>
+                        <Typography variant="h3" sx={{ fontSize: "25px", marginBottom: "10px", textAlign: medq ? "center" : "left" }}>
                             More
                         </Typography>
                         <ul className="more-list">
@@ -152,7 +153,7 @@ const Contacts = ({ phoneNumber, address, email }) => {
                         </ul>
                     </Box>
                     <Box>
-                        <Typography variant="h3" sx={{ fontSize: "25px", marginBottom: "10px" }}>
+                        <Typography variant="h3" sx={{ fontSize: "25px", marginBottom: "10px", textAlign: medq ? "center" : "left" }}>
                             Links
                         </Typography>
                         <ul className="more-list">
