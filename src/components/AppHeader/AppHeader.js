@@ -63,6 +63,8 @@ const AppHeader = () => {
         setState({ ...state, [anchor]: open });
     };
 
+    console.log([...sections.map(item => item.path.replace("/#", ""))]);
+
     const list = (anchor) => (
         <Box
             sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
@@ -70,15 +72,15 @@ const AppHeader = () => {
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
-            <List>
+            <Scrollspy items={[...sections.map(item => item.path.replace("/#", ""))]} currentClassName="active-section">
                 {sections.map((text, index) => (
-                    <ListItem key={text?.name + index} disablePadding>
+                    <li key={text?.name + index} disablePadding>
                         <ListItemButton>
-                            <HashLink to={text?.path} className="drawer-links"><ListItemText primary={text.name} /></HashLink>
+                            <HashLink to={text?.path} className="drawer-links" style={{ color: "inherit" }}><ListItemText primary={text.name} /></HashLink>
                         </ListItemButton>
-                    </ListItem>
+                    </li>
                 ))}
-            </List>
+            </Scrollspy>
             <Divider />
             <List>
                 {['All mail', 'Trash', 'Spam'].map((text, index) => (

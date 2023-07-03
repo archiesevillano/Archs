@@ -1,4 +1,4 @@
-import { Container, Divider, Paper, Typography, Box, Tooltip, useMediaQuery } from "@mui/material";
+import { Container, Divider, Paper, Typography, Box, Tooltip, useMediaQuery, Button } from "@mui/material";
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import DownloadIcon from '@mui/icons-material/Download';
 import LinkIcon from '@mui/icons-material/Link';
@@ -16,9 +16,9 @@ const CertificateCard = ({ snapShotSource, issuedDate, title, issuerImage, issue
             <img src={snapShotSource} alt="media" className="certificate__image" />
             <div className="__overlay">
                 <Tooltip title="View">
-                    <IconButton aria-label="View Image" className="overlay__btns" style={{ transitionDelay: "0.2s" }}>
-                        <RemoveRedEyeIcon sx={{ color: "white" }} />
-                    </IconButton>
+                    <Button sx={{ color: "white" }} startIcon={<RemoveRedEyeIcon />} className="overlay__btns" style={{ transitionDelay: "0.2s" }} target="_blank" href={snapShotSource}>
+                        View Certificate
+                    </Button>
                 </Tooltip>
             </div>
             <div className="certificateCard__details" style={{ bottom: medq ? "-105px" : "-90px" }}>

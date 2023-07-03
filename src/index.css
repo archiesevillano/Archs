@@ -34,3 +34,7 @@ html {
   scroll-padding-top: 5%;
   /* height of your navbar */
 }
+
+.active-section {
+  color: red;
+}
