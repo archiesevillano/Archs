@@ -20,16 +20,6 @@ const CertificateCard = ({ snapShotSource, issuedDate, title, issuerImage, issue
                         <RemoveRedEyeIcon sx={{ color: "white" }} />
                     </IconButton>
                 </Tooltip>
-                <Tooltip title="Download">
-                    <IconButton aria-label="Download Image" className="overlay__btns" style={{ transitionDelay: "0.4s" }}>
-                        <DownloadIcon sx={{ color: "white" }} />
-                    </IconButton>
-                </Tooltip>
-                <Tooltip title="Copy link">
-                    <IconButton aria-label="View Image" className="overlay__btns" style={{ transitionDelay: "0.6s" }}>
-                        <LinkIcon sx={{ color: "white" }} />
-                    </IconButton>
-                </Tooltip>
             </div>
             <div className="certificateCard__details" style={{ bottom: medq ? "-105px" : "-90px" }}>
                 <div className="issuer__container">

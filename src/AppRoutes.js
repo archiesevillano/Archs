@@ -26,11 +26,6 @@ export const sections = [
         child: <ProjectSection />,
     },
     {
-        name: "About",
-        path: "/#about",
-        child: <AboutSection />,
-    },
-    {
         name: "Contacts",
         path: "/#contacts",
         child: <Contacts />,
