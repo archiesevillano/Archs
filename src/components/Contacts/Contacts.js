@@ -1,70 +1,42 @@
 import { Container, Box, IconButton, Typography, useTheme, Snackbar, Button, useMediaQuery } from "@mui/material";
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import CloseIcon from '@mui/icons-material/Close';
 import "./Contacts.css";
 import { Link } from "react-router-dom";
+import { Notif } from "../../SnackBar";
 
 const Contacts = ({ phoneNumber, address, email }) => {
 
-    const [open, setOpen] = useState(false);
-    const [barMessage, setBarMessage] = useState("Done");
     const currentTheme = useTheme();
     const medq = useMediaQuery('(max-width: 764px)');
+    const { handleOpen } = useContext(Notif);
 
     const handleCopy = item => {
 
         switch (item) {
             case "email":
                 navigator.clipboard.writeText(email);
+                handleOpen("Email Copied");
                 break;
             case "address":
                 navigator.clipboard.writeText(address);
+                handleOpen("Address Copied");
                 break;
             case "phone":
                 navigator.clipboard.writeText(phoneNumber);
+                handleOpen("Phone Number Copied");
                 break;
         }
     }
-
-    const handleClick = (message, copyItem) => {
-        handleCopy(copyItem); //copies specific item based on the passed argument
-        setBarMessage(message);
-        setOpen(true);
-    };
-
-    const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-            return;
-        }
-        setOpen(false);
-    };
-
-    const action = (
-        <React.Fragment>
-            <Button color="secondary" size="small" onClick={handleClose}>
-                UNDO
-            </Button>
-            <IconButton
-                size="small"
-                aria-label="close"
-                color="inherit"
-                onClick={handleClose}
-            >
-                <CloseIcon fontSize="small" />
-            </IconButton>
-        </React.Fragment>
-    );
-
 
     return (
         <footer className="appfooter" style={{ backgroundColor: currentTheme.palette.background.paper }} id="contacts">
             <Container maxWidth="lg" disableGutters>
                 <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <img style={{ width: "75px", height: "75px" }} src={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/archs.svg?alt=media&token=877a5271-feee-4ef0-b6ed-efbc205d52b4"} alt="logo" />
+                    <img style={{ width: "75px", height: "75px" }} src={process.env.REACT_APP_LOGO} alt="logo" />
                     <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center" }}>
                         <Typography fontSize="1.5rem" fontWeight="bold">
                             Archs
@@ -87,7 +59,7 @@ const Contacts = ({ phoneNumber, address, email }) => {
                                         <p className="detail-content">{address}</p>
                                     </Box>
                                     <Box>
-                                        <IconButton aria-label="copy" onClick={() => handleClick("Address Copied", "address")}>
+                                        <IconButton aria-label="copy" onClick={() => handleCopy("address")}>
                                             <ContentCopyIcon sx={{ fontSize: "15px", opacity: "0.8" }} />
                                         </IconButton>
                                     </Box>
@@ -103,7 +75,7 @@ const Contacts = ({ phoneNumber, address, email }) => {
                                         <p className="detail-content">{email}</p>
                                     </Box>
                                     <Box>
-                                        <IconButton aria-label="copy" onClick={() => handleClick("Email Copied", "email")}>
+                                        <IconButton aria-label="copy" onClick={() => handleCopy("email")}>
                                             <ContentCopyIcon sx={{ fontSize: "15px", opacity: "0.8" }} />
                                         </IconButton>
                                     </Box>
@@ -119,7 +91,7 @@ const Contacts = ({ phoneNumber, address, email }) => {
                                         <p className="detail-content">{phoneNumber}</p>
                                     </Box>
                                     <Box>
-                                        <IconButton aria-label="copy" onClick={() => handleClick("Phone Number Copied", "phone")}>
+                                        <IconButton aria-label="copy" onClick={() => handleCopy("phone")}>
                                             <ContentCopyIcon sx={{ fontSize: "15px", opacity: "0.8" }} />
                                         </IconButton>
                                     </Box>
@@ -183,13 +155,6 @@ const Contacts = ({ phoneNumber, address, email }) => {
                 <Typography align="center" variant="subtitle1">Copyright &copy; 2023 Archie Cedeño Sevillano</Typography>
                 <Typography align="center" variant="subtitle1">Website Portfolio</Typography>
             </Container>
-            <Snackbar
-                open={open}
-                autoHideDuration={6000}
-                onClose={handleClose}
-                message={barMessage}
-                action={action}
-            />
         </footer >
     );
 }

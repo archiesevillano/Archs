@@ -10,7 +10,8 @@ const CertificateSection = () => {
 
     const loadCertificates = async () => {
         try {
-            const response = await Axios.get("http://localhost:3001/certificates");
+            const host = process.env.REACT_APP_SERVER;
+            const response = await Axios.get(`${host}/certificates`);
             const data = response.data;
 
             setCertificateList(data);

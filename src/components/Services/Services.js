@@ -13,7 +13,8 @@ const Services = () => {
     const icons = [<DesignServicesOutlinedIcon sx={{ fontSize: "35px" }} />, <CodeOutlinedIcon sx={{ fontSize: "35px" }} />, <AnalyticsOutlinedIcon sx={{ fontSize: "35px" }} />];
     const getServices = async () => {
         try {
-            const response = await Axios.get("http://localhost:3001/services");
+            const host = process.env.REACT_APP_SERVER;
+            const response = await Axios.get(`${host}/services`);
             const data = await response.data;
             const svc = data.myservices;
 

@@ -20,10 +20,10 @@ const AboutSection = () => {
 
     const getAboutData = async () => {
         try {
-            const response = await Axios.get("http://localhost:3001/about");
+            const host = process.env.REACT_APP_SERVER;
+            const response = await Axios.get(`${host}/about`);
             const data = response?.data;
             data.sort((a, b) => a.order - b.order);
-            console.log(data);
             setAboutList(response?.data);
             setContent({ question: data[counter]?.question, answer: data[counter]?.answer });
         } catch (error) {

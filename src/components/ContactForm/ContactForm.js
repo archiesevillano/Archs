@@ -2,19 +2,32 @@ import "./ContactForm.css";
 import { Box, Container, Paper, Typography, useTheme, IconButton, Button, Divider } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import SendIcon from '@mui/icons-material/Send';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Email } from "@mui/icons-material";
 import Axios from 'axios';
+import { Notif } from "../../SnackBar";
+
 
 const ContactForm = ({ boxStyle, closeAction }) => {
 
+    const { handleOpen } = useContext(Notif);
     const currentTheme = useTheme();
-    const [inputs, setInputs] = useState({});
+    const [receiverName, setReceiverName] = useState("");
+    const [receiverEmail, setReceiverEmail] = useState("");
+    const [receiverMessage, setReceiverMessage] = useState("");
+    const postBody = {
+        name: receiverName,
+        email: receiverEmail,
+        message: `<div style="padding:30px;"><p>${receiverMessage}</p><br/><p><b>From ${receiverName}</b></p></div>`,
+    }
 
     const sendForm = async () => {
         try {
-            const response = await Axios.post("http://localhost:3001/send-email");
+            const host = process.env.REACT_APP_SERVER;
+            const response = await Axios.post(`${host}/send-email`, postBody);
             console.log(response);
+            handleOpen("Sent");
+            closeAction();
         }
         catch (err) {
             console.error(err);
@@ -36,15 +49,15 @@ const ContactForm = ({ boxStyle, closeAction }) => {
                 </Box>
                 <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", gap: "5px", width: "100%" }}>
                     <div className="inputGroup field">
-                        <input type="text" id="nameField" className="nameField inputFields" />
+                        <input type="text" id="nameField" className="nameField inputFields" autoComplete="off" onChange={e => setReceiverName(e.target.value)} />
                         <label htmlFor="nameField" className="inputGroup__label">Name</label>
                     </div>
                     <div className="inputGroup field">
-                        <input type="email" id="emailField" className="emailField inputFields" />
+                        <input type="email" id="emailField" className="emailField inputFields" autoComplete="off" onChange={e => setReceiverEmail(e.target.value)} />
                         <label htmlFor="emailField" className="inputGroup__label">Email</label>
                     </div>
                     <div className="inputGroup field">
-                        <textarea type="text" id="messageField" className="messageField inputFields"></textarea>
+                        <textarea type="text" id="messageField" className="messageField inputFields" autoComplete="off" onChange={e => setReceiverMessage(e.target.value)}></textarea>
                         <label htmlFor="messageField" className="inputGroup__label">Message</label>
                     </div>
                 </Box>

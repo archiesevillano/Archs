@@ -11,17 +11,17 @@ const CvSection = () => {
 
     // download resume file from firebase
     const downloadResume = async () => {
-        const response = await Axios.get("http://localhost:3001/file/download/resume.pdf", { responseType: 'blob' });
+        const host = process.env.REACT_APP_SERVER;
+        const response = await Axios.get(`${host}/file/download/resume.pdf`, { responseType: 'blob' });
         const data = await response.data;
-        console.log(data);
         FileDownload(data, "ACS_CV_DD.pdf"); //DD stands for Direct Download
     }
 
     //download file via google drive alternative link
     const alternativeDownload = async () => {
-        const response = await Axios.get("http://localhost:3001/file/download/alternative-download-cv", { responseType: 'blob' });
+        const host = process.env.REACT_APP_SERVER;
+        const response = await Axios.get(`${host}/file/download/alternative-download-cv`, { responseType: 'blob' });
         const data = await response.data;
-        console.log(data);
         FileDownload(data, "ACS_CV_AD.pdf"); //AD stands for Direct Download
     }
 

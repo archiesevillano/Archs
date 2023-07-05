@@ -110,7 +110,7 @@ const AppHeader = () => {
         </Drawer>
         <Box sx={{ width: "40px", height: "40px", marginLeft: "10px", transform: { xl: "translateX(0px)", sm: "translateX(0px)", xs: "translateX(-15px)" } }}>
             <Link to="/" style={{ display: "flex", justifyContent: "center", alignItems: "center", color: "inherit", textDecoration: "none" }}>
-                <img className="app-logo" src={"https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/archs.svg?alt=media&token=877a5271-feee-4ef0-b6ed-efbc205d52b4"} alt="logo" />
+                <img className="app-logo" src={process.env.REACT_APP_LOGO} alt="logo" />
                 <Typography variant="subtitle1" sx={{ display: "inline-block" }}>Archs</Typography>
             </Link>
         </Box>

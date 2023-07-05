@@ -18,6 +18,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { Divider } from '@mui/material';
+import SnackBar from './SnackBar';
 
 // modal box style <ContactForm/>
 const style = {
@@ -39,25 +40,27 @@ function App() {
   return (
     <div className="App">
       <AppRoutes>
-        <AppHeader />
-        <Hero openContact={handleOpen} />
-        <AboutSection />
-        <Services />
-        <Divider />
-        <ProjectSection />
-        <TechStacks />
-        <CertificateSection />
-        <CvSection />
-        <Contacts phoneNumber="(+63)956-881-0654" email="archie.sevillano29@gmail.com" address="Las Piñas City NCR, Metro Manila PH" />
-        <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-          sx={{ margin: 0, boxSizing: "border-box!important" }}
-        >
-          <ContactForm boxStyle={style} closeAction={handleClose} />
-        </Modal>
+        <SnackBar>
+          <AppHeader />
+          <Hero openContact={handleOpen} />
+          <AboutSection />
+          <Services />
+          <Divider />
+          <ProjectSection />
+          <TechStacks />
+          <CertificateSection />
+          <CvSection />
+          <Contacts phoneNumber="(+63)956-881-0654" email="archie.sevillano29@gmail.com" address="Las Piñas City NCR, Metro Manila PH" />
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+            sx={{ margin: 0, boxSizing: "border-box!important" }}
+          >
+            <ContactForm boxStyle={style} closeAction={handleClose} />
+          </Modal>
+        </SnackBar>
       </AppRoutes>
     </div>
   );
