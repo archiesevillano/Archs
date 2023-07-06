@@ -25,7 +25,7 @@ const TechStacks = () => {
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    });
+    }, []);
 
     const getData = async () => {
         try {
@@ -46,7 +46,7 @@ const TechStacks = () => {
     useEffect(() => {
         // load data
         getData();
-    });
+    }, []);
 
 
     return (
