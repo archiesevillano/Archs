@@ -11,7 +11,7 @@ const Socials = () => {
 
     return (
         <ul className="socials-list">
-            {socialLinks.map((site, index) => <Tooltip title={site?.name}><li><Link key={index + "social-links"} style={{ textDecoration: "none", color: "inherit" }} to={site?.path}>{site?.icon}</Link></li></Tooltip>)}
+            {socialLinks.map((site, index) => <Tooltip title={site?.name} key={index + "social-links"}><li key={index + "social-links"}><Link key={index + "social-links"} style={{ textDecoration: "none", color: "inherit" }} to={site?.path}>{site?.icon}</Link></li></Tooltip>)}
         </ul>
     );
 }

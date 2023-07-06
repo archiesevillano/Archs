@@ -73,7 +73,7 @@ const AppHeader = () => {
             <Scrollspy items={[...sections.map(item => item.path.replace("/#", ""))]} currentClassName="active-section">
                 {sections.map((text, index) => (
                     <li key={text?.name + index} disablePadding>
-                        <ListItemButton>
+                        <ListItemButton key={text?.name + index}>
                             <HashLink to={text?.path} className="drawer-links" style={{ color: "inherit" }}><ListItemText primary={text.name} /></HashLink>
                         </ListItemButton>
                     </li>
@@ -115,7 +115,7 @@ const AppHeader = () => {
         <Box sx={{ display: { sm: "block", xs: "none" } }}>
             <ul className="topnav-list">
                 {sections.map(item => <li><HashLink key={item?.name + "links"} smooth data-to-scrollspy-id={item?.path.replace("/#", "")} to={item?.path}>{item?.name}</HashLink></li>)}
-                <li>
+                <li key="theme-button">
                     <IconButton onClick={switchMode} sx={{ color: scrolled ? "white" : "inherit" }}>
                         {mode === "dark" ? <DarkModeIcon /> : <Brightness7Icon />}
                     </IconButton>

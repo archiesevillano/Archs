@@ -2,13 +2,13 @@ import "./ContactForm.css";
 import { Box, Container, Paper, Typography, useTheme, IconButton, Button, Divider } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import SendIcon from '@mui/icons-material/Send';
-import { useState, useContext } from 'react';
+import { useState, useContext, forwardRef } from 'react';
 import { Email } from "@mui/icons-material";
 import Axios from 'axios';
 import { Notif } from "../../SnackBar";
 
 
-const ContactForm = ({ boxStyle, closeAction }) => {
+const ContactForm = forwardRef(({ boxStyle, closeAction }, ref) => {
 
     const { handleOpen } = useContext(Notif);
     const currentTheme = useTheme();
@@ -35,7 +35,7 @@ const ContactForm = ({ boxStyle, closeAction }) => {
     }
 
     return (
-        <Container maxWidth="sm" disableGutters sx={{ ...boxStyle, overflow: "hidden", minWidth: "300px", margin: "0 20px", margin: 0 }}>
+        <Container ref={ref} maxWidth="sm" disableGutters sx={{ ...boxStyle, overflow: "hidden", minWidth: "300px", margin: "0 20px", margin: 0 }}>
             <IconButton onClick={closeAction} sx={{ position: "absolute", right: "0", top: "0", margin: "10px" }}>
                 <CloseIcon />
             </IconButton>
@@ -68,6 +68,6 @@ const ContactForm = ({ boxStyle, closeAction }) => {
             </Box>
         </Container >
     );
-}
+})
 
 export default ContactForm;
