@@ -5,16 +5,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { Navigation, Pagination, Mousewheel, Keyboard, EffectCoverflow } from "swiper";
+import { Pagination, EffectCoverflow } from "swiper";
 import ProgressCard from "../ProgressCard/ProgressCard";
-import { Container, Tooltip, useMediaQuery, Typography, useTheme } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 
 const TechStacks = () => {
 
     const [list, setList] = useState([]);
     const screenWidth = window.screen.width;
     const [fitCardCount, setFitCardCount] = useState(1);
-    const currentTheme = useTheme();
 
     useEffect(() => {
         const handleResize = () => {
@@ -26,14 +25,14 @@ const TechStacks = () => {
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, []);
+    });
 
     const getData = async () => {
         try {
             // request data from expressjs to firebase
             const host = process.env.REACT_APP_SERVER;
             const newList = await Axios.get(`${host}/technologies`);
-            const sortedStacks = newList?.data.sort((a, b) => b.proficiency - a.proficiency);
+            newList?.data.sort((a, b) => b.proficiency - a.proficiency);
             //set the response data
             //generate components using the data
             setList(
@@ -47,7 +46,7 @@ const TechStacks = () => {
     useEffect(() => {
         // load data
         getData();
-    }, []);
+    });
 
 
     return (
