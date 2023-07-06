@@ -20,7 +20,6 @@ const TechStacks = () => {
         const handleResize = () => {
             setFitCardCount(Math.floor(screenWidth / 250));
         };
-        console.log(fitCardCount);
 
         window.addEventListener('resize', handleResize);
 
@@ -35,7 +34,6 @@ const TechStacks = () => {
             const host = process.env.REACT_APP_SERVER;
             const newList = await Axios.get(`${host}/technologies`);
             const sortedStacks = newList?.data.sort((a, b) => b.proficiency - a.proficiency);
-            console.log(sortedStacks);
             //set the response data
             //generate components using the data
             setList(

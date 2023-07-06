@@ -15,11 +15,9 @@ const Hero = ({ openContact }) => {
         // blurry effect when the portfolio hasn't opened or started yet
         if (started == true) {
             setVisibility({ blur: "0", opacity: "1" });
-            console.log("opened");
         }
         else {
             setVisibility({ blur: "12px", opacity: "0.3" });
-            console.log("closed");
         }
     }, [started]);
 
