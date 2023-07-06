@@ -63,8 +63,6 @@ const AppHeader = () => {
         setState({ ...state, [anchor]: open });
     };
 
-    console.log([...sections.map(item => item.path.replace("/#", ""))]);
-
     const list = (anchor) => (
         <Box
             sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
