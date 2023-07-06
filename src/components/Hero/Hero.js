@@ -56,11 +56,11 @@ const Hero = ({ openContact }) => {
                             I am a passionate Web Developer who transform my Ideas into digital reality with Creativity and Technical Expertise
                         </Typography>
                         <Box sx={{ display: "flex", justifyContent: "flex-start", alignItems: "center", flexWrap: "wrap" }}>
-                            <button class="getInTouch-button" onClick={openContact}>
+                            <button className="getInTouch-button" onClick={openContact}>
                                 <EmailIcon className="icon" />
-                                <span class="texts">
-                                    <span class="text-1">GET IN TOUCH</span>
-                                    <span class="text-2">Message me</span>
+                                <span className="texts">
+                                    <span className="text-1">GET IN TOUCH</span>
+                                    <span className="text-2">Message me</span>
                                 </span>
                             </button>
                             <Socials />

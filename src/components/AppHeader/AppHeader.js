@@ -116,7 +116,7 @@ const AppHeader = () => {
         </Box>
         <Box sx={{ display: { sm: "block", xs: "none" } }}>
             <ul className="topnav-list">
-                {sections.map(item => <li><HashLink smooth data-to-scrollspy-id={item?.path.replace("/#", "")} to={item?.path}>{item?.name}</HashLink></li>)}
+                {sections.map(item => <li><HashLink key={item?.name + "links"} smooth data-to-scrollspy-id={item?.path.replace("/#", "")} to={item?.path}>{item?.name}</HashLink></li>)}
                 <li>
                     <IconButton onClick={switchMode} sx={{ color: scrolled ? "white" : "inherit" }}>
                         {mode === "dark" ? <DarkModeIcon /> : <Brightness7Icon />}

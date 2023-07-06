@@ -55,7 +55,7 @@ const AppRoutes = ({ children }) => {
         <Router>
             {children}
             <Routes>
-                {sections.map(item => <Route exact path={item?.path} component={item?.child} />)}
+                {sections.map(item => <Route key={item?.path + "route"} exact path={item?.path} component={item?.child} />)}
             </Routes>
         </Router>
     );
