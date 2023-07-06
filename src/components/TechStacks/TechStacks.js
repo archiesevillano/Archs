@@ -37,7 +37,7 @@ const TechStacks = () => {
             //set the response data
             //generate components using the data
             setList(
-                newList?.data.map(stackItem => <SwiperSlide className="technologies-slides" key={stackItem?.name}><Tooltip title={stackItem?.name}><ProgressCard cardImage={stackItem?.image} cardTitle={stackItem?.name} value={stackItem?.proficiency} /></Tooltip></SwiperSlide>)
+                newList?.data.map(stackItem => <SwiperSlide className="technologies-slides" key={stackItem?.name}><ProgressCard cardImage={stackItem?.image} cardTitle={stackItem?.name} value={stackItem?.proficiency} /></SwiperSlide>)
             );
         } catch (error) {
             console.log(error);

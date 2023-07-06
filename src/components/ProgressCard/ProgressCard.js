@@ -1,7 +1,7 @@
 import { Typography, Box, Paper, Container } from "@mui/material";
 import "./ProgressCard.css";
 import * as React from 'react';
-import { useRef } from 'react';
+import { useRef, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import LinearProgress from '@mui/material/LinearProgress';
 import ProgressDonut from "../ProgressDonut/ProgressDonut";
@@ -29,8 +29,8 @@ LinearProgressWithLabel.propTypes = {
     value: PropTypes.number.isRequired,
 };
 
-const ProgressCard = React.forwardRef(({ cardImage, cardTitle, value }, ref) => {
-
+const ProgressCard = forwardRef(({ cardImage, cardTitle, value }, ref) => {
+    
     return (
         <Paper className="progress-card" ref={ref}>
             <img src={cardImage} alt={cardTitle} className="card-image" />
