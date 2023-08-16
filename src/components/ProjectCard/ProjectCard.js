@@ -15,7 +15,7 @@ const ProjectCard = ({ image, name, repository, stacks }) => {
     const handleSetStacks = () => {
         const images = stacks.map(stack => <img className="projectSTechstack" src={stack} />);
 
-        return images.map(imgStack => <li>{imgStack}</li>);
+        return images.map(imgStack => <li key={imgStack}>{imgStack}</li>);
     }
 
     return (
