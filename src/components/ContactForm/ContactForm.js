@@ -49,16 +49,16 @@ const ContactForm = forwardRef(({ boxStyle, closeAction }, ref) => {
                 </Box>
                 <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", gap: "5px", width: "100%" }}>
                     <div className="inputGroup field">
-                        <input type="text" id="nameField" className="nameField inputFields" autoComplete="off" onChange={e => setReceiverName(e.target.value)} />
-                        <label htmlFor="nameField" className="inputGroup__label">Name</label>
+                        <input style={{ color: currentTheme.palette.background.paper }} type="text" id="nameField" className="nameField inputFields" autoComplete="off" onChange={e => setReceiverName(e.target.value)} />
+                        <label htmlFor="nameField" className="inputGroup__label" style={{ color: "#141414" }}>Name</label>
                     </div>
                     <div className="inputGroup field">
-                        <input type="email" id="emailField" className="emailField inputFields" autoComplete="off" onChange={e => setReceiverEmail(e.target.value)} />
-                        <label htmlFor="emailField" className="inputGroup__label">Email</label>
+                        <input style={{ color: currentTheme.palette.background.paper }} type="email" id="emailField" className="emailField inputFields" autoComplete="off" onChange={e => setReceiverEmail(e.target.value)} />
+                        <label htmlFor="emailField" className="inputGroup__label" style={{ color: "#141414" }}>Email</label>
                     </div>
                     <div className="inputGroup field">
-                        <textarea type="text" id="messageField" className="messageField inputFields" autoComplete="off" onChange={e => setReceiverMessage(e.target.value)}></textarea>
-                        <label htmlFor="messageField" className="inputGroup__label">Message</label>
+                        <textarea style={{ color: currentTheme.palette.background.paper }} type="text" id="messageField" className="messageField inputFields" autoComplete="off" onChange={e => setReceiverMessage(e.target.value)}></textarea>
+                        <label htmlFor="messageField" className="inputGroup__label" style={{ color: "#141414" }}>Message</label>
                     </div>
                 </Box>
                 <Box sx={{ display: "flex", justifyContent: "flex-end", alignItems: "center", width: "100%", gap: "5px", padding: { sm: "15px 20px", xs: "15px 0px" }, flexDirection: { sm: "row", xs: "column-reverse" } }}>
