@@ -28,7 +28,7 @@ const ProjectSection = () => {
 
         return list.map(project => {
             return <SwiperSlide className="project__swiper__slide">
-                <ProjectCard image={project?.image} name={project?.name} repository={project?.repository} />
+                <ProjectCard image={project?.image} name={project?.name} repository={project?.repository} stacks={project?.stacks} />
             </SwiperSlide>;
         })
     }
