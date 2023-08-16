@@ -10,8 +10,14 @@ import "./ProjectCard.css";
 import { Link } from "react-router-dom";
 
 // developmentStatus : completed | deployed | prototyping | underdevelopment
-const ProjectCard = ({ image, name, repository, }) => {
+const ProjectCard = ({ image, name, repository, stacks }) => {
     const currentTheme = useTheme();
+
+    const handleSetStacks = () => {
+        const images = stacks.map(stack => <img className="projectSTechstack" src={stack} />);
+
+        return images.map(imgStack => <li>{imgStack}</li>);
+    }
 
     return (
         <div className="projectCard">
@@ -20,7 +26,11 @@ const ProjectCard = ({ image, name, repository, }) => {
                 <p>{name}</p>
                 <Link to={repository}>
                     <GitHub />
+                    View Code
                 </Link>
+                <ul className="projectTechstacks">
+                    {stacks === undefined ? null : handleSetStacks()}
+                </ul>
             </div>
         </div >
     );
