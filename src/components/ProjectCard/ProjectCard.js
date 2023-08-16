@@ -11,7 +11,6 @@ import { Link } from "react-router-dom";
 
 // developmentStatus : completed | deployed | prototyping | underdevelopment
 const ProjectCard = ({ image, name, repository, stacks }) => {
-    const currentTheme = useTheme();
 
     const handleSetStacks = () => {
         const images = stacks.map(stack => <img className="projectSTechstack" src={stack} />);
