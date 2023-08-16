@@ -1,7 +1,6 @@
-import logo from './logo.svg';
+
 import './App.css';
 import AppHeader from './components/AppHeader/AppHeader';
-import Socials from './components/Socials/Socials';
 import AppRoutes from './AppRoutes';
 import AboutSection from './components/AboutSection/AboutSection';
 import Contacts from './components/Contacts/Contacts';
@@ -13,12 +12,10 @@ import CertificateSection from './components/CertificateSection/CertificateSecti
 import Hero from './components/Hero/Hero';
 import ContactForm from './components/ContactForm/ContactForm';
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { Divider } from '@mui/material';
 import SnackBar from './SnackBar';
+import Axios from 'axios';
 
 // modal box style <ContactForm/>
 const style = {
@@ -36,32 +33,63 @@ function App() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [loaded, setLoad] = React.useState(false);
+
+  const checkServer = async () => {
+    const response = await Axios.get(process.env.REACT_APP_SERVER);
+
+    return response;
+  }
+
+  const loaderDialog = <div className="loaderDialog">
+    <div className="three-body">
+      <div className="three-body__dot"></div>
+      <div className="three-body__dot"></div>
+      <div className="three-body__dot"></div>
+    </div>
+  </div>
+
+  React.useEffect(() => {
+    setTimeout(async () => {
+      try {
+        const result = await checkServer();
+        setLoad(result.data);
+      }
+      catch (error) {
+        console.log(error);
+      }
+
+    }, 5000);
+  }, []);
 
   return (
     <div className="App">
-      <AppRoutes>
-        <SnackBar>
-          <AppHeader />
-          <Hero openContact={handleOpen} />
-          <AboutSection />
-          <Services />
-          <Divider />
-          <ProjectSection />
-          <TechStacks />
-          <CertificateSection />
-          <CvSection />
-          <Contacts phoneNumber="(+63)956-881-0654" email="archie.sevillano29@gmail.com" address="Las Piñas City NCR, Metro Manila PH" />
-          <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-            sx={{ margin: 0, boxSizing: "border-box!important" }}
-          >
-            <ContactForm boxStyle={style} closeAction={handleClose} />
-          </Modal>
-        </SnackBar>
-      </AppRoutes>
+      {
+        loaded ? <AppRoutes>
+          <SnackBar>
+            <AppHeader />
+            <Hero openContact={handleOpen} />
+            <AboutSection />
+            <Services />
+            <Divider />
+            <ProjectSection />
+            <TechStacks />
+            <CertificateSection />
+            <CvSection />
+            <Contacts phoneNumber="(+63)956-881-0654" email="archie.sevillano29@gmail.com" address="Las Piñas City NCR, Metro Manila PH" />
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+              sx={{ margin: 0, boxSizing: "border-box!important" }}
+            >
+              <ContactForm boxStyle={style} closeAction={handleClose} />
+            </Modal>
+          </SnackBar>
+        </AppRoutes>
+          : loaderDialog
+      }
     </div>
   );
 }
