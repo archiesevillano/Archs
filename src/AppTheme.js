@@ -7,7 +7,7 @@ export const ProvideTheme = React.createContext();
 
 const AppTheme = ({ children }) => {
     //theme mode
-    const [mode, setMode] = useState("light");
+    const [mode, setMode] = useState("dark");
 
     //generate app theme
     let theme = createTheme(mode === "dark" ? lightMode() : darkMode());
