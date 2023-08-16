@@ -7,6 +7,7 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import "./Contacts.css";
 import { Link } from "react-router-dom";
 import { Notif } from "../../SnackBar";
+import { HashLink } from "react-router-hash-link";
 
 const Contacts = ({ phoneNumber, address, email }) => {
 
@@ -105,22 +106,22 @@ const Contacts = ({ phoneNumber, address, email }) => {
                         </Typography>
                         <ul className="more-list">
                             <li>
-                                <Link to="/">Download GIT Cheatsheet</Link>
+                                <Link to="https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet">Download GIT Cheatsheet</Link>
                             </li>
                             <li>
-                                <Link to="/">Google Free APIS</Link>
+                                <Link to="https://developers.google.com/apis-explorer">Google Free APIS</Link>
                             </li>
                             <li>
-                                <Link to="/">OpenAI - ChatGPT</Link>
+                                <Link to="https://chat.openai.com/">OpenAI - ChatGPT</Link>
                             </li>
                             <li>
-                                <Link to="/">FontAwesome</Link>
+                                <Link to="https://fontawesome.com/">FontAwesome</Link>
                             </li>
                             <li>
-                                <Link to="/">Neumorphism</Link>
+                                <Link to="https://neumorphism.io/">Neumorphism</Link>
                             </li>
                             <li>
-                                <Link to="/">Bootstrap</Link>
+                                <Link to="https://getbootstrap.com/">Bootstrap</Link>
                             </li>
                         </ul>
                     </Box>
@@ -130,22 +131,16 @@ const Contacts = ({ phoneNumber, address, email }) => {
                         </Typography>
                         <ul className="more-list">
                             <li>
-                                <Link to="/">Terms of Service</Link>
+                                <HashLink to="https://drive.google.com/file/d/1tLDU0Qc8gePDphKUZkJTCfhv6_33yRma/view?usp=sharing" download>Download CV</HashLink>
                             </li>
                             <li>
-                                <Link to="/">Download CV</Link>
+                                <HashLink to="/#get-started">Back to top</HashLink>
                             </li>
                             <li>
-                                <Link to="/">Projects</Link>
+                                <HashLink to="/#projects">Projects</HashLink>
                             </li>
                             <li>
-                                <Link to="/">Services</Link>
-                            </li>
-                            <li>
-                                <Link to="/">Skills</Link>
-                            </li>
-                            <li>
-                                <Link to="/">About</Link>
+                                <HashLink to="/#services">Services</HashLink>
                             </li>
                         </ul>
                     </Box>
