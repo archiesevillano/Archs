@@ -14,6 +14,7 @@ const CvSection = () => {
         const host = process.env.REACT_APP_SERVER;
         const response = await Axios.get(`${host}/file/download/resume.pdf`, { responseType: 'blob' });
         const data = await response.data;
+
         FileDownload(data, "ACS_CV_DD.pdf"); //DD stands for Direct Download
     }
 
@@ -22,6 +23,7 @@ const CvSection = () => {
         const host = process.env.REACT_APP_SERVER;
         const response = await Axios.get(`${host}/file/download/alternative-download-cv`, { responseType: 'blob' });
         const data = await response.data;
+
         FileDownload(data, "ACS_CV_AD.pdf"); //AD stands for Direct Download
     }
 
