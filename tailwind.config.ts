@@ -13,6 +13,25 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        'josefin': ['Josefin Sans', 'sans-serif'],
+        'jost': ['Jost', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
+        'mukta': ['Mukta', 'sans-serif'],
+        'quicksand': ['Quicksand', 'sans-serif'],
+        'rubik': ['Rubik', 'sans-serif'],
+      },
+      colors: {
+        primary: {
+          100: '#e95050',
+          200: '#e92121'
+        },
+        secondary: {
+          100: '#333333',
+          200: '#111111'
+        },
+      }
+
     },
   },
   plugins: [],
