@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import me from "@/assets/images/archPic.png";
 import Link from 'next/link';
-import ProjectCard from '@/components/ProjectCard';
 import MyPic from "@/assets/images/profile.png";
 import MiniBox from '@/components/MiniBox';
 
@@ -10,6 +9,7 @@ import blender from "@/assets/images/blender.png";
 import figma from "@/assets/images/figma.png";
 import adobe from "@/assets/images/adobe.png";
 import BarRoute from '@/components/BarRoute';
+import SwiperSection from '@/components/SwiperSection';
 
 export default function Home() {
   return (
@@ -35,8 +35,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex items-end justify-center h-full relative archImg lg:flex hidden">
-          <Image src={me} width={300} height={300} alt="Archie Image" className='object-contain h-[85vh] w-max' />
+        <div className="flex items-center justify-center h-full relative archImg lg:flex hidden">
+          <Image src={me} width={1000} height={1000} alt="Archie Image" className='object-contain h-[60vh] w-max' />
         </div>
         <div className="stacks flex gap-5 items-center justify-center md:justify-start absolute bottom-0 left-[50%] translate-x-[-50%] z-10 pb-10 max-w-[1300px]  md:px-10 w-full">
           <img src={"https://firebasestorage.googleapis.com/v0/b/archsfb.appspot.com/o/techstacks%2FNextJS.png?alt=media&token=82522ea9-32c4-42c8-9a47-61e50de284fd"} alt="Stack" className="w-[25px] h-[25px] object-contain" />
@@ -52,21 +52,19 @@ export default function Home() {
       <section className="projectSection flex flex-col justify-center items-start w-full py-28 md:px-[180px] px-5">
         <button type="button" className="mb-8 font-rubik"><i className="fi fi-rr-boxes inline-block translate-y-[3px] me-3"></i>See all Projects</button>
 
-        <h2 className="text-4xl font-bold font-rubik mb-2">Featured Projects</h2>
+        <h2 className="text-4xl font-bold font-rubik mb-2">Featured Works</h2>
         <p className="opacity-80 font-quicksand">Projects that were developed for display and coding practice only.</p>
-        <div className="projectList flex gap-5 justify-start items-center w-full py-5 overflow-hidden md:px-0 px-4">
-          <ProjectCard imageShowcase="https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Projects%2Fmorsee.png?alt=media&token=2885f3f8-5855-466d-9ad5-a57c6e72b46d" logo="https://firebasestorage.googleapis.com/v0/b/archsfb.appspot.com/o/techstacks%2FNextJS.png?alt=media&token=82522ea9-32c4-42c8-9a47-61e50de284fd" description="Free Online Morse Code Encoder and Decoder API" repository="" liveLink="/" title="Morsee" publishDate="March 20, 2023" />
-          <ProjectCard imageShowcase="https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Projects%2Fmorsee.png?alt=media&token=2885f3f8-5855-466d-9ad5-a57c6e72b46d" logo="https://firebasestorage.googleapis.com/v0/b/archsfb.appspot.com/o/techstacks%2FNextJS.png?alt=media&token=82522ea9-32c4-42c8-9a47-61e50de284fd" description="Free Online Morse Code Encoder and Decoder API" repository="" liveLink="/" title="Morsee" publishDate="March 20, 2023" />
-          <ProjectCard imageShowcase="https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Projects%2Fmorsee.png?alt=media&token=2885f3f8-5855-466d-9ad5-a57c6e72b46d" logo="https://firebasestorage.googleapis.com/v0/b/archsfb.appspot.com/o/techstacks%2FNextJS.png?alt=media&token=82522ea9-32c4-42c8-9a47-61e50de284fd" description="Free Online Morse Code Encoder and Decoder API" repository="" liveLink="/" title="Morsee" publishDate="March 20, 2023" />
+        <div className="projectList flex gap-5 justify-start items-center w-full md:px-0 px-4 mt-10">
+          <SwiperSection />
         </div>
       </section>
-      <section className="certificationSection flex md:flex-row flex-col-reverse md:justify-between md:items-center py-28 w-full md:px-[180px] px-10 gap-10 md:gap-0">
+      <section className="certificationSection flex lg:flex-row flex-col md:justify-between md:items-center py-28 w-full md:px-[180px] px-10 gap-16 lg:gap-0">
         <div className="">
           <div className="flex items-center opacity-70"><div className="w-[35px] h-[2px] bg-secondary-200 inline-block me-2 opacity-70"></div><span className="font-rubik font-bold">Certification</span></div>
           <h1 className="text-5xl font-bold opacity-90">Bootcamp</h1>
           <h1 className="text-3xl font-bold text-primary-100">Top student</h1>
           <p className="font-quicksand">Completed Full stack Web Development Course</p>
-          <Link className="inline-block mt-7 py-2 pe-3 font-rubik font-bold opacity-80" href="/certificates">See list of Certificates<i className="fi fi-sr-arrow-right ms-3 inline-block translate-y-[3px]"></i></Link>
+          <Link className="inline-block mt-7 py-2 pe-3 font-rubik font-bold opacity-80" href="/about/certificates">See list of Certificates<i className="fi fi-sr-arrow-right ms-3 inline-block translate-y-[3px]"></i></Link>
         </div>
 
         <div className="p-5 relative">
@@ -87,12 +85,12 @@ export default function Home() {
           <p className="font-quicksand md:w-[500px]">
             I have a deep passion for continuous exploration and learning. I don't just do it to expand my skill set; I genuinely enjoy the process. I dedicate a significant amount of my time to learning because it keeps me thoroughly engaged and entertained
           </p>
-          <div className="md:w-[400px] flex flex-col justify-center flex-wrap mt-5 md:mt-0">
-            <div className="flex flex-row w-full flex-wrap sm:justify-start justify-center ">
+          <div className="md:w-[400px] w-full flex flex-col justify-center flex-wrap mt-5 md:mt-0">
+            <div className="flex sm:flex-row flex-col w-full flex-wrap sm:justify-start justify-center ">
               <MiniBox title="Programming" subTitle="Advanced" logo={vscode} />
               <MiniBox title="Editing" subTitle="Intermediate" logo={adobe} />
             </div>
-            <div className="flex flex-row w-full flex-wrap sm:justify-start justify-center">
+            <div className="flex sm:flex-row flex-col w-full flex-wrap sm:justify-start justify-center">
               <MiniBox title="Modelling" subTitle="Intermediate" logo={blender} />
               <MiniBox title="Designing" subTitle="Intermediate" logo={figma} />
             </div>
@@ -106,19 +104,19 @@ export default function Home() {
         <div className="flex flex-col">
           <h1 className="font-quicksand text-4xl" style={{ color: "var(--forecolor)" }}>Got a project?<br />Let's talk.</h1>
           <p className="opacity-80 text-sm font-quicksand md:w-[350px] mt-8" style={{ color: "var(--forecolor)" }}>Send me a message, click my email below so we can start our business.</p>
-          <div className="flex flex-row gap-5 justify-between items-center inline-block w-max mt-20">
+          <Link href="mailto:archie.sevillano29@gmail.com" className="flex flex-row gap-5 justify-between items-center inline-block w-max mt-20">
             <span className="font-bold font-quicksand" style={{ color: "var(--forecolor)" }}>@archie.sevillano29</span>
             <i style={{ color: "var(--forecolor)" }} className="fi fi-br-angle-double-small-right text-primary-200 font-bold translate-y-[3px]"></i>
-          </div>
+          </Link>
         </div>
         <div className="flex flex-col">
           <h1 className="font-quicksand text-4xl" style={{ color: "var(--forecolor)" }}>Want to know more?</h1>
           <p className="font-quicksand text-xl opacity-70" style={{ color: "var(--forecolor)" }}>Check this out:</p>
           <div className="flex flex-col gap-3 py-3 flex-wrap">
-            <BarRoute title="Tech Stack" subTitle="List of technologies that I can use" href="/techstack" />
-            <BarRoute title="Experiences" subTitle="Work and Other experiences" href="/experiences" />
-            <BarRoute title="Certificates" subTitle="Certifications received " href="/certificates" />
-            <BarRoute title="Hobbies" subTitle="Personal entertainments" href="/hobbies" />
+            <BarRoute title="Tech Stack" subTitle="List of technologies that I can use" href="/about/techstack" />
+            <BarRoute title="Experiences" subTitle="Work and Other experiences" href="/about/experiences" />
+            <BarRoute title="Certificates" subTitle="Certifications received " href="/about/certificates" />
+            <BarRoute title="Hobbies" subTitle="Personal entertainments" href="/about/hobbies" />
           </div>
         </div>
       </section>
