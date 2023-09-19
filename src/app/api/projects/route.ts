@@ -1,17 +1,17 @@
 import { NextResponse } from "next/server";
 import mongoose from 'mongoose';
-import { TechstackSchema } from "../../../../schemas";
+import { ProjectSchema } from "../../../../schemas";
 
 export async function POST() {
     try {
         const dbConnectionString: string = process.env.NEXT_PUBLIC_MONGODB_URI === undefined ? "" : process.env.NEXT_PUBLIC_MONGODB_URI;
 
-        await mongoose.connect(dbConnectionString);
-        const schema = new mongoose.Schema(TechstackSchema);
-        const techstack = mongoose.models.Techstack || mongoose.model('Techstack', schema, 'techstacks');
+        await mongoose.connect(dbConnectionString, { serverSelectionTimeoutMS: 60000 });
+        const schema = new mongoose.Schema(ProjectSchema);
+        const projects = mongoose.models.Project || mongoose.model('Project', schema, 'projects');
 
-        // get the list of techstacks
-        const list = await techstack.find();
+        // get the list of projects
+        const list = await projects.find();
 
         return NextResponse.json({ data: list });
     }
