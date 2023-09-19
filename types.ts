@@ -23,16 +23,6 @@ export type IconLinkType = {
     iconClass: string,
 }
 
-export type ProjectType = {
-    repository: string,
-    logo: string,
-    imageShowcase: string,
-    title: string,
-    description: string,
-    liveLink?: string,
-    publishDate: string
-}
-
 export type MiniBoxType = {
     logo: string | StaticImageData,
     title: string,
@@ -59,4 +49,79 @@ export type TechstackType = {
     logo: string,
     href: string,
     description: string
+}
+
+export enum ProjectLabel {
+    Website = 'Website',
+    Design = 'Design',
+    logo = "Logo"
+}
+
+export type FrameCardType = {
+    photo: string,
+    logo: string,
+    title: string,
+    projectType: ProjectLabel,
+    link: string,
+    shadowed: boolean
+}
+
+export type ProjectType = {
+    _id: string,
+    logo: string,
+    photo: string,
+    title: string,
+    description: string,
+    sourceLink: string,
+    details: string[],
+    type: ProjectLabel,
+    liveLink: string
+}
+
+export type WebtoolType = {
+    name: string,
+    logo: string,
+    photo: string,
+    link: string,
+    description: string
+}
+
+export type LinkDropDownItemType = {
+    name: string,
+    href: string
+}
+
+export type LinkDropDownItemsType = {
+    collection: LinkDropDownItemType[];
+}
+
+export type ProjectFilterType = {
+    name: string,
+    href: string
+}
+
+export type CertificateType = {
+    title: string,
+    issuedDate: string,
+    organization: string,
+    photo: string,
+    description: string,
+    logo: string
+}
+
+export type WorkExpType = {
+    position: string,
+    date: string,
+    companyName: string,
+    companyLogo: string
+}
+
+export type PhotoDescription = {
+    image: string,
+    description: string
+}
+
+export type HobbyDataType = {
+    textContents: string[],
+    illustration: PhotoDescription[]
 }
