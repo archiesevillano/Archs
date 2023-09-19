@@ -30,6 +30,14 @@ const config: Config = {
           100: '#333333',
           200: '#111111'
         },
+        random: {
+          red: '#ff7878',
+          gray: '#a8a8a8',
+          dark: '#222222',
+        },
+        body: {
+          plain: '#f2f2f2',
+        }
       }
 
     },
