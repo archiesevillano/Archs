@@ -5,7 +5,7 @@ import DetailCard from "@/components/DetailCard";
 
 const getlist = async () => {
     try {
-        const response = await fetch("http://localhost:3000/api/experiences",
+        const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/experiences`,
             {
                 method: 'POST',
                 headers: {
@@ -16,7 +16,7 @@ const getlist = async () => {
 
         const { data } = await response.json();
 
-        return data.map((item: WorkExpType) => <DetailCard data={item} />);
+        return data.map((item: WorkExpType) => <DetailCard key={(item.companyName + item.date).toString().replace(" ", "")} data={item} />);
 
     } catch (error) {
         console.log(error);
