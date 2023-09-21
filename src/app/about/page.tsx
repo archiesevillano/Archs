@@ -21,16 +21,16 @@ export default function About() {
             <section className="md:max-w-[1300px] w-full py-28 flex md:flex-row flex-col gap-5 md:justify-between items-center">
                 <div className="flex flex-col justify-center gap-4 px-5 pt-12">
                     <p className="font-quicksand max-w-[500px] w-full">
-                        Hello, I'm Archie, a passionate Full Stack Web Developer dedicated to crafting exceptional digital experiences. With a strong foundation in web development technologies and a keen eye for design, I'm on a mission to transform creative ideas into functional and visually appealing websites and applications.
+                        Hello, I&apos;m Archie, a passionate Full Stack Web Developer dedicated to crafting exceptional digital experiences. With a strong foundation in web development technologies and a keen eye for design, I&apos;m on a mission to transform creative ideas into functional and visually appealing websites and applications.
                     </p>
                     <p className="font-quicksand max-w-[500px] w-full">
                         My journey in the world of web development began with a curiosity to explore the limitless possibilities of the internet. I embarked on this path with enthusiasm, and my commitment to continuous learning has been my guiding force ever since. I take pride in my proficiency in HTML, CSS, JavaScript, and a range of modern frameworks and libraries, including ReactJS and Node.js.
                     </p>
                     <p className="font-quicksand max-w-[500px] w-full">
-                        What sets me apart is not only my technical expertise but also my commitment to delivering excellence. I understand the importance of user-centric design and the need for responsive, efficient, and scalable solutions. Whether it's crafting pixel-perfect front-end interfaces or optimizing back-end functionality, I approach every project with dedication and attention to detail.
+                        What sets me apart is not only my technical expertise but also my commitment to delivering excellence. I understand the importance of user-centric design and the need for responsive, efficient, and scalable solutions. Whether it&apos;s crafting pixel-perfect front-end interfaces or optimizing back-end functionality, I approach every project with dedication and attention to detail.
                     </p>
                     <p className="font-quicksand max-w-[500px] w-full">
-                        I'm excited to collaborate on new and innovative projects, tackle complex challenges, and contribute my skills to help businesses and individuals thrive in the digital landscape. Let's work together to turn your ideas into reality and create web experiences that leave a lasting impression.
+                        I&apos;m excited to collaborate on new and innovative projects, tackle complex challenges, and contribute my skills to help businesses and individuals thrive in the digital landscape. Let&apos;s work together to turn your ideas into reality and create web experiences that leave a lasting impression.
                     </p>
                 </div>
                 <div className="flex flex-col md:mt-0 mt-5">
