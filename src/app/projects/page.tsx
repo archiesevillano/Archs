@@ -8,6 +8,7 @@ import { projectFilters } from "../../../data";
 import HistoryBackBtn from "@/components/HistoryBackBtn";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 const ProjectList: any = async () => {
     try {
@@ -61,7 +62,7 @@ export default function Projects() {
             setToClient(true);
             setData(filteredData(filterType));
         }
-        , []);
+    );
 
 
     useEffect(() => {
@@ -128,7 +129,7 @@ export default function Projects() {
                     </button>
                     <div className="flex md:flex-row flex-col items-center justify-center gap-10 bg-white rounded-xl drop-shadow-xl md:w-[75%] md:h-[75%] w-[95%] h-[95%]">
                         <div className="projectImageSection md:h-full h-[20%] md:w-[50%] w-full flex items-center justify-center">
-                            <img src={selectedItem?.photo} className="object-cover object-top md:w-[75%] md:h-[75%] w-full h-full" />
+                            <Image src={selectedItem?.photo !== undefined ? selectedItem?.photo : ""} alt="Project Image" className="object-cover object-top md:w-[75%] md:h-[75%] w-full h-full" width={900} height={900} />
                         </div>
                         <div className="projectDetails flex flex-col justify-between items-center md:h-[80%] h-[80%] md:w-[50%] w-full px-5 md:py-0 py-5">
                             <div className="flex flex-col items-start w-full divide-y-2">
@@ -157,7 +158,7 @@ export default function Projects() {
                                     </p>
                                     <div className="flex flex-col py-2 w-full gap-2 mt-5">
                                         {
-                                            selectedItem?.details.map(item => <p className="font-bold font-quicksand italic text-xs text-primary-100">
+                                            selectedItem?.details.map((item, index) => <p key={`details_${index}`} className="font-bold font-quicksand italic text-xs text-primary-100">
                                                 <i className="fi fi-rs-check-circle inline-block translate-y-[3px] me-3"></i>
                                                 {item}
                                             </p>)

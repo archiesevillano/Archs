@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState, useEffect } from 'react';
 import "./componentStyles.css";
+import { IconLinkType } from "../../types";
 
 export const IconLink = async ({ toolTipText, to, iconClass }: IconLinkType) => {
 
