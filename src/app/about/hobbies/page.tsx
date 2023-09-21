@@ -22,14 +22,14 @@ export default async function hobbies() {
                 </p>
 
                 <p className="font-quicksand">
-                    I'm someone who's always fueled by curiosity and high expectations. I have a strong desire to achieve satisfaction through my endeavors, and I admit I can get a bit frustrated when things don't turn out the way I envisioned.
+                    I&apos;m someone who&apos;s always fueled by curiosity and high expectations. I have a strong desire to achieve satisfaction through my endeavors, and I admit I can get a bit frustrated when things don&apos;t turn out the way I envisioned.
 
-                    One of my greatest passions is programming. I can lose track of time, dedicating almost entire days to practicing and discovering new aspects of this craft. Yet, there are moments when I find myself getting a bit bored with web development tasks. During those times, my curiosity leads me to explore new territories or revisit hobbies I haven't enjoyed in a while.
+                    One of my greatest passions is programming. I can lose track of time, dedicating almost entire days to practicing and discovering new aspects of this craft. Yet, there are moments when I find myself getting a bit bored with web development tasks. During those times, my curiosity leads me to explore new territories or revisit hobbies I haven&apos;t enjoyed in a while.
 
                     Here are some of the other activities and interests that captivate me beyond the world of web programming:
                 </p>
                 <p className="font-quicksand">
-                    Since I was a kid, I've loved editing stuff. I started at age 9, and it became my hobby. I'm really into making things look just right, especially when it comes to picking colors. I began by editing pictures online using tools like <strong>'pizap'</strong> and <strong>'pixlr.'</strong> Later, I got a laptop and learned <strong>Photoshop</strong> with my cousin, who also liked editing with it. I then moved from editing photos to editing videos using phone apps like <strong>Power Director</strong>, <strong>Viva Video</strong>, and some cool VFX apps. After that, I learned how to use <strong>Adobe After Effects</strong> and <strong>Premiere Pro</strong>. I had a blast learning all this stuff!
+                    Since I was a kid, I&apos;ve loved editing stuff. I started at age 9, and it became my hobby. I&apos;m really into making things look just right, especially when it comes to picking colors. I began by editing pictures online using tools like <strong>&apos;pizap&apos;</strong> and <strong>&apos;pixlr.&apos;</strong> Later, I got a laptop and learned <strong>Photoshop</strong> with my cousin, who also liked editing with it. I then moved from editing photos to editing videos using phone apps like <strong>Power Director</strong>, <strong>Viva Video</strong>, and some cool VFX apps. After that, I learned how to use <strong>Adobe After Effects</strong> and <strong>Premiere Pro</strong>. I had a blast learning all this stuff!
                 </p>
 
                 <p className="font-quicksand">
@@ -42,7 +42,7 @@ export default async function hobbies() {
                 </div>
 
                 <p className="font-quicksand">
-                    However, as life got busier, particularly with my dedication to web programming, I found myself juggling multiple pursuits. While I couldn't fully dive into C# for game development, I did manage to build a solid foundation in 3D modeling and animation. It was a rewarding experience, and even though time constraints were a challenge, I was thrilled with the knowledge I gained.
+                    However, as life got busier, particularly with my dedication to web programming, I found myself juggling multiple pursuits. While I couldn&apos;t fully dive into C# for game development, I did manage to build a solid foundation in 3D modeling and animation. It was a rewarding experience, and even though time constraints were a challenge, I was thrilled with the knowledge I gained.
                 </p>
 
                 <p className="font-quicksand">
@@ -54,7 +54,7 @@ export default async function hobbies() {
                 </div>
 
                 <p className="font-quicksand">
-                    I understood that these skills were not only valuable additions but also essential components of becoming a well-rounded web developer. As I ventured into logo design and the art of vector graphics, I was excited about the creative possibilities they brought to the table. These skills not only allowed me to enhance the aesthetics of the websites I worked on but also gave me the ability to craft unique and memorable visual elements that complemented the overall user experience. It's all part of my journey to be a full-fledged web developer, capable of delivering not just functional but also visually stunning online experiences.
+                    I understood that these skills were not only valuable additions but also essential components of becoming a well-rounded web developer. As I ventured into logo design and the art of vector graphics, I was excited about the creative possibilities they brought to the table. These skills not only allowed me to enhance the aesthetics of the websites I worked on but also gave me the ability to craft unique and memorable visual elements that complemented the overall user experience. It&apos;s all part of my journey to be a full-fledged web developer, capable of delivering not just functional but also visually stunning online experiences.
                 </p>
 
                 <p className="font-quicksand">
@@ -62,7 +62,7 @@ export default async function hobbies() {
                 </p>
 
                 <p className="font-quicksand">
-                    In our classes, we not only learned how to code but also how to visualize and design websites with precision. Figma emerged as a vital companion in this journey. We were tasked with showcasing the wireframe of our websites, and Figma's feature-rich platform proved to be a game-changer. It offered us the means to effortlessly craft visually captivating pages and interfaces that would elevate the overall user experience of our websites.
+                    In our classes, we not only learned how to code but also how to visualize and design websites with precision. Figma emerged as a vital companion in this journey. We were tasked with showcasing the wireframe of our websites, and Figma&apos;s feature-rich platform proved to be a game-changer. It offered us the means to effortlessly craft visually captivating pages and interfaces that would elevate the overall user experience of our websites.
                 </p>
 
                 <div className="flex flex-col gap-5 items-center justify-center">
@@ -71,7 +71,7 @@ export default async function hobbies() {
                 </div>
 
                 <p className="font-quicksand">
-                    This immersive experience has reinforced the importance of not just creating functional websites but also ensuring they are visually appealing and user-friendly. It's been an enriching part of my Fullstack Development Bootcamp, equipping me with valuable skills to create seamless and aesthetically pleasing web solutions.
+                    This immersive experience has reinforced the importance of not just creating functional websites but also ensuring they are visually appealing and user-friendly. It&apos;s been an enriching part of my Fullstack Development Bootcamp, equipping me with valuable skills to create seamless and aesthetically pleasing web solutions.
                 </p>
 
 
