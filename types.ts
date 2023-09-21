@@ -101,6 +101,7 @@ export type ProjectFilterType = {
 }
 
 export type CertificateType = {
+    _id: string,
     title: string,
     issuedDate: string,
     organization: string,
