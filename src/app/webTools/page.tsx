@@ -15,7 +15,7 @@ const getlist: any = async () => {
         );
 
         const { data } = await response.json();
-        const web_tools = data.map((tool: WebtoolType) => <WebToolCard logo={tool.logo} photo={tool.photo} name={tool.name} link={tool.link} description={tool.description} />);
+        const web_tools = data.map((tool: WebtoolType) => <WebToolCard key={tool.name.toString().replaceAll(" ", "")} logo={tool.logo} photo={tool.photo} name={tool.name} link={tool.link} description={tool.description} />);
 
 
         return web_tools;
