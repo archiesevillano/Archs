@@ -83,7 +83,7 @@ export type WebtoolType = {
     logo: string,
     photo: string,
     link: string,
-    description: string
+    description: string,
 }
 
 export type LinkDropDownItemType = {

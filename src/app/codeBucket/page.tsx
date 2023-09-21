@@ -60,10 +60,7 @@ export default function CodeBucket() {
                     </div>
                 </div>
                 <div className="flex justify-start md:items-start items-center w-full md:flex-row flex-col gap-10 flex-wrap">
-                    <ProjectCard photo="https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Projects%2Fmorsee.png?alt=media&token=2885f3f8-5855-466d-9ad5-a57c6e72b46d" logo="https://firebasestorage.googleapis.com/v0/b/archsfb.appspot.com/o/techstacks%2FNextJS.png?alt=media&token=82522ea9-32c4-42c8-9a47-61e50de284fd" description="Free Online Morse Code Encoder and Decoder API" sourceLink="/" title="Morsee" />
-                    <ProjectCard photo="https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Projects%2Fmorsee.png?alt=media&token=2885f3f8-5855-466d-9ad5-a57c6e72b46d" logo="https://firebasestorage.googleapis.com/v0/b/archsfb.appspot.com/o/techstacks%2FNextJS.png?alt=media&token=82522ea9-32c4-42c8-9a47-61e50de284fd" description="Free Online Morse Code Encoder and Decoder API" sourceLink="/" title="Morsee" />
-                    <ProjectCard photo="https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Projects%2Fmorsee.png?alt=media&token=2885f3f8-5855-466d-9ad5-a57c6e72b46d" logo="https://firebasestorage.googleapis.com/v0/b/archsfb.appspot.com/o/techstacks%2FNextJS.png?alt=media&token=82522ea9-32c4-42c8-9a47-61e50de284fd" description="Free Online Morse Code Encoder and Decoder API" sourceLink="/" title="Morsee" />
-                    <ProjectCard photo="https://firebasestorage.googleapis.com/v0/b/archs-baedb.appspot.com/o/Projects%2Fmorsee.png?alt=media&token=2885f3f8-5855-466d-9ad5-a57c6e72b46d" logo="https://firebasestorage.googleapis.com/v0/b/archsfb.appspot.com/o/techstacks%2FNextJS.png?alt=media&token=82522ea9-32c4-42c8-9a47-61e50de284fd" description="Free Online Morse Code Encoder and Decoder API" sourceLink="/" title="Morsee" />
+
                 </div>
             </section>
         </main>
