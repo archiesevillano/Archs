@@ -41,7 +41,7 @@ export default async function Techstack() {
                 </div>
             </header>
             <div className="list flex gap-x-4 gap-y-8 flex-wrap justify-start max-w-[1300px] w-full pb-28 px-10">
-                {data.map((item: TechstackType, index: number) => <StackCard index={index} photo={item.logo} title={item.name} path={item.href} description={item.description} />)}
+                {data.map((item: TechstackType, index: number) => <StackCard key={"tstack".concat(index.toString())} index={index} photo={item.logo} title={item.name} path={item.href} description={item.description} />)}
             </div>
         </div>
     );
