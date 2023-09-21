@@ -23,7 +23,7 @@ export default function Home() {
             </div>
             <p className="font-bold text-5xl font-montserrat mb-3">I am <span className="text-primary-200">Archie</span></p>
             <p className="text-sm opacity-90 font-quicksand">
-              I'm a full-stack web developer who began exploring programming in 2018 during high school. However, it was the onset of the pandemic that propelled me to embrace programming seriously, utilizing my skills for freelancing to generate income.
+              I&apos;m a full-stack web developer who began exploring programming in 2018 during high school. However, it was the onset of the pandemic that propelled me to embrace programming seriously, utilizing my skills for freelancing to generate income.
             </p>
             <div className="downloadCVBtn inline-block w-max bg-primary-200 mt-5 rounded-sm rounded" role="button">
               <a href="https://drive.google.com/uc?export=download&id=1i_eR7ntUPu0lpRlHgG_SMN9N7XjvqjCY" className="py-2 px-5 inline-block" download referrerPolicy="no-referrer" style={{ color: "#f2f2f2" }}>
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex items-center justify-center h-full relative archImg lg:flex hidden">
-          <Image src={me} width={1000} height={1000} alt="Archie Image" className='object-contain h-[60vh] w-max' />
+          <Image src={me} width={1000} height={1000} alt="Archie Image" className="object-contain h-[60vh] w-max" />
         </div>
         <div className="stacks flex gap-5 items-center justify-center md:justify-start absolute bottom-0 left-[50%] translate-x-[-50%] z-10 pb-10 max-w-[1300px]  md:px-10 w-full">
           <img src={"https://firebasestorage.googleapis.com/v0/b/archsfb.appspot.com/o/techstacks%2FNextJS.png?alt=media&token=82522ea9-32c4-42c8-9a47-61e50de284fd"} alt="Stack" className="w-[25px] h-[25px] object-contain" />
@@ -83,7 +83,7 @@ export default function Home() {
         <div className="flex flex-col items-start">
           <h1 className="font-bold md:text-5xl text-3xl mb-5">What I often do?</h1>
           <p className="font-quicksand md:w-[500px]">
-            I have a deep passion for continuous exploration and learning. I don't just do it to expand my skill set; I genuinely enjoy the process. I dedicate a significant amount of my time to learning because it keeps me thoroughly engaged and entertained
+            I have a deep passion for continuous exploration and learning. I don&apos;t just do it to expand my skill set; I genuinely enjoy the process. I dedicate a significant amount of my time to learning because it keeps me thoroughly engaged and entertained
           </p>
           <div className="md:w-[400px] w-full flex flex-col justify-center flex-wrap mt-5 md:mt-0">
             <div className="flex sm:flex-row flex-col w-full flex-wrap sm:justify-start justify-center ">
@@ -102,7 +102,7 @@ export default function Home() {
       </section>
       <section className="contactMe flex md:flex-row flex-col-reverse md:justify-between md:items-center py-28 w-full md:px-[180px] px-10 bg-secondary-100 md:gap-0 gap-10">
         <div className="flex flex-col">
-          <h1 className="font-quicksand text-4xl" style={{ color: "var(--forecolor)" }}>Got a project?<br />Let's talk.</h1>
+          <h1 className="font-quicksand text-4xl" style={{ color: "var(--forecolor)" }}>Got a project?<br />Let&apos;s talk.</h1>
           <p className="opacity-80 text-sm font-quicksand md:w-[350px] mt-8" style={{ color: "var(--forecolor)" }}>Send me a message, click my email below so we can start our business.</p>
           <Link href="mailto:archie.sevillano29@gmail.com" className="flex flex-row gap-5 justify-between items-center inline-block w-max mt-20">
             <span className="font-bold font-quicksand" style={{ color: "var(--forecolor)" }}>@archie.sevillano29</span>
