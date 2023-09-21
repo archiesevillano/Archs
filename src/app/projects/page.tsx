@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const ProjectList: any = async () => {
     try {
-        const response = await fetch("http://localhost:3000/api/projects",
+        const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/projects`,
             {
                 method: 'POST',
                 headers: {

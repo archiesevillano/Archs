@@ -4,7 +4,7 @@ import HistoryBackBtn from "@/components/HistoryBackBtn";
 
 const getlist: any = async () => {
     try {
-        const response = await fetch("http://localhost:3000/api/webtools",
+        const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/webtools`,
             {
                 method: 'POST',
                 headers: {

@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { CertificateType } from "../../types";
 
-const CertificateCard = async ({ title, issuedDate, organization, photo, description, logo }: CertificateType) => {
+const CertificateCard = async ({ _id, title, issuedDate, organization, photo, description, logo }: CertificateType) => {
     return (
-        <div className="certificateCard flex flex-row justify-between max-w-[400px] h-[300px] w-full overflow-hidden relative drop-shadow-md bg-body-plain border-8 border-white">
+        <div id={_id} className="certificateCard flex flex-row justify-between max-w-[400px] h-[300px] w-full overflow-hidden relative drop-shadow-md bg-body-plain border-8 border-white">
             <div className="flex flex-col items-start justify-evenly h-full p-4 pe-7">
                 <div className="flex items-center justify-start relative">
                     <h1 className="font-bold font-mukta">{title}</h1>
