@@ -4,7 +4,7 @@ import { CertificateType } from "../../../../types";
 
 const getlist: any = async () => {
     try {
-        const response = await fetch("http://localhost:3000/api/certificates",
+        const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/certificates`,
             {
                 method: 'POST',
                 headers: {
@@ -16,7 +16,7 @@ const getlist: any = async () => {
 
         const { data } = await response.json();
 
-        return data.map((item: CertificateType) => <CertificateCard title={item.title} issuedDate={item.issuedDate} organization={item.organization} photo={item.photo} description={item.description} logo={item.logo} />)
+        return data.map((item: CertificateType) => <CertificateCard key={item._id} _id={item._id} title={item.title} issuedDate={item.issuedDate} organization={item.organization} photo={item.photo} description={item.description} logo={item.logo} />)
     }
     catch (error) {
         console.log(error);
