@@ -3,7 +3,6 @@ import me from "@/assets/images/archPic.png";
 import Link from 'next/link';
 import MyPic from "@/assets/images/profile.png";
 import MiniBox from '@/components/MiniBox';
-
 import vscode from "@/assets/images/vscode.png";
 import blender from "@/assets/images/blender.png";
 import figma from "@/assets/images/figma.png";
@@ -39,10 +38,10 @@ export default function Home() {
           <Image src={me} width={1000} height={1000} alt="Archie Image" className="object-contain h-[60vh] w-max" />
         </div>
         <div className="stacks flex gap-5 items-center justify-center md:justify-start absolute bottom-0 left-[50%] translate-x-[-50%] z-10 pb-10 max-w-[1300px]  md:px-10 w-full">
-          <img src={"https://firebasestorage.googleapis.com/v0/b/archsfb.appspot.com/o/techstacks%2FNextJS.png?alt=media&token=82522ea9-32c4-42c8-9a47-61e50de284fd"} alt="Stack" className="w-[25px] h-[25px] object-contain" />
-          <img src={"https://firebasestorage.googleapis.com/v0/b/archsfb.appspot.com/o/techstacks%2FTypescript.png?alt=media&token=1a21c143-30ae-41a8-a2b5-6e473c9dff90"} alt="Stack" className="w-[25px] h-[25px] object-contain" />
-          <img src={"https://firebasestorage.googleapis.com/v0/b/archsfb.appspot.com/o/techstacks%2FTaillwind%20CSS.png?alt=media&token=1d22d05a-9b9a-4b09-8bbf-fce696be111a"} alt="Stack" className="w-[25px] h-[25px] object-contain" />
-          <img src={"https://firebasestorage.googleapis.com/v0/b/archsfb.appspot.com/o/techstacks%2FMongoDB.png?alt=media&token=48ebb25f-d98e-4c19-ac0f-bb950d9228a7"} alt="Stack" className="w-[25px] h-[25px] object-contain" />
+          <Image src={"https://firebasestorage.googleapis.com/v0/b/archsfb.appspot.com/o/techstacks%2FNextJS.png?alt=media&token=82522ea9-32c4-42c8-9a47-61e50de284fd"} alt="Stack" className="w-[25px] h-[25px] object-contain" width={25} height={25} />
+          <Image src={"https://firebasestorage.googleapis.com/v0/b/archsfb.appspot.com/o/techstacks%2FTypescript.png?alt=media&token=1a21c143-30ae-41a8-a2b5-6e473c9dff90"} alt="Stack" className="w-[25px] h-[25px] object-contain" width={25} height={25} />
+          <Image src={"https://firebasestorage.googleapis.com/v0/b/archsfb.appspot.com/o/techstacks%2FTaillwind%20CSS.png?alt=media&token=1d22d05a-9b9a-4b09-8bbf-fce696be111a"} alt="Stack" className="w-[25px] h-[25px] object-contain" width={25} height={25} />
+          <Image src={"https://firebasestorage.googleapis.com/v0/b/archsfb.appspot.com/o/techstacks%2FMongoDB.png?alt=media&token=48ebb25f-d98e-4c19-ac0f-bb950d9228a7"} alt="Stack" className="w-[25px] h-[25px] object-contain" width={25} height={25} />
         </div>
         <div className="arrow flex items-center gap-5 rotate-[90deg] absolute right-[0] md:bottom-[0] bottom-[-80px] md:flex hidden">
           <span className="uppercase text-sm font-bold font-mukta">Explore more</span>

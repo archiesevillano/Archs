@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FrameCardType } from "../../types";
 import "./componentStyles.css";
+import Image from "next/image";
 
 const FrameCard = async ({ photo, logo, title, projectType, link, shadowed }: FrameCardType) => {
 
@@ -10,11 +11,11 @@ const FrameCard = async ({ photo, logo, title, projectType, link, shadowed }: Fr
         <div className={csName}>
             <Link href={link} className="inline-block h-full">
                 <div className="upper h-full">
-                    <img src={photo} alt="Project Photo" className="projectPhoto w-full h-full object-cover object-top p-5" />
+                    <Image src={photo} alt="Project Photo" width={1000} height={1000} className="projectPhoto w-full h-full object-cover object-top p-5" />
                 </div>
                 <div className="lower flex justify-between items-center absolute bottom-0 w-full z-[1] bg-white p-3">
                     <div className="logoContainer flex items-center justify-center gap-4">
-                        <img src={logo} alt="logo" className="object-contain w-[30px] h-[30px]" />
+                        <Image src={logo} alt="logo" className="object-contain" width={30} height={30} />
                         <span className="inline-block font-quicksand font-bold">
                             {title}
                         </span>

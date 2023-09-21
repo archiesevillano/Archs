@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CertificateType } from "../../types";
+import Image from "next/image";
 
 const CertificateCard = async ({ _id, title, issuedDate, organization, photo, description, logo }: CertificateType) => {
     return (
@@ -20,7 +21,7 @@ const CertificateCard = async ({ _id, title, issuedDate, organization, photo, de
             </div>
             <div className="flex relative flex-col items-center justify-evenly h-full shrink-0 bg-random-gray w-[40%] p-5">
                 <div className="flex items-center justify-start">
-                    <img src={logo} alt="logo" className="w-[80px] h-[80px] shrink-0" />
+                    <Image src={logo} alt="logo" className="w-[80px] h-[80px] shrink-0" width={80} height={80} />
                 </div>
                 <div className="flex items-center justify-start text-center">
                     <p className="font-bold font-quicksand text-white">{organization}</p>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import "./componentStyles.css";
 import { StackCardType } from "../../types";
+import Image from "next/image";
 
 const StackCard = async ({ index, title, description, path, photo }: StackCardType) => {
     return (
@@ -12,7 +13,7 @@ const StackCard = async ({ index, title, description, path, photo }: StackCardTy
                 <Link href={path} className="text-sm font-bold text-primary-200 mt-5">Learn more</Link>
             </div>
             <div className="flex items-center justify-center">
-                <img src={photo} alt="logo" width={70} height={70} />
+                <Image src={photo} alt="logo" width={70} height={70} />
             </div>
         </div>
     );
