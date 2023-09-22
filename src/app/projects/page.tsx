@@ -62,7 +62,7 @@ export default function Projects() {
             setToClient(true);
             setData(filteredData(filterType));
         }
-    );
+        , []);
 
 
     useEffect(() => {
