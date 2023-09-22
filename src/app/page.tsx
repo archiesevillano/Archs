@@ -49,7 +49,7 @@ export default function Home() {
         </div>
       </section>
       <section className="projectSection flex flex-col justify-center items-start w-full py-28 md:px-[180px] px-5">
-        <button type="button" className="mb-8 font-rubik"><i className="fi fi-rr-boxes inline-block translate-y-[3px] me-3"></i>See all Projects</button>
+        <Link type="button" className="mb-8 font-rubik" href={"/projects"}><i className="fi fi-rr-boxes inline-block translate-y-[3px] me-3"></i>See all Projects</Link>
 
         <h2 className="text-4xl font-bold font-rubik mb-2">Featured Works</h2>
         <p className="opacity-80 font-quicksand">Projects that were developed for display and coding practice only.</p>
