@@ -111,7 +111,7 @@ export default function Projects() {
                 <div className="projectListMenu flex justify-between items-center w-full">
                     <div className="showingContainer">
                         <span className="me-2">Showing: </span>
-                        <span className="filterTag py-2 px-4 inline-block text-sm font-quicksand border rounded">All works</span>
+                        <span className="filterTag py-2 px-4 inline-block text-sm font-quicksand border rounded">{isClient ? filterType ? filterType : "All works" : <></>}</span>
                     </div>
                     <div className="filtersContainer">
                         <LinkDropDown collection={projectFilters} />
