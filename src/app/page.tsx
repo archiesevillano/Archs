@@ -25,7 +25,7 @@ export default function Home() {
               I&apos;m a full-stack web developer who began exploring programming in 2018 during high school. However, it was the onset of the pandemic that propelled me to embrace programming seriously, utilizing my skills for freelancing to generate income.
             </p>
             <div className="downloadCVBtn inline-block w-max bg-primary-200 mt-5 rounded-sm rounded" role="button">
-              <a href="https://drive.google.com/uc?export=download&id=1i_eR7ntUPu0lpRlHgG_SMN9N7XjvqjCY" className="py-2 px-5 inline-block" download referrerPolicy="no-referrer" style={{ color: "#f2f2f2" }}>
+              <a href="https://drive.google.com/uc?export=download&id=152HeDcS56r9r3ZHGG5ivAcYkM3Fs1Ck2" className="py-2 px-5 inline-block" download referrerPolicy="no-referrer" style={{ color: "#f2f2f2" }}>
                 <i className="fi fi-br-download me-3 inline-block translate-y-[3px]"></i>
                 <span className="text-sm">
                   Download CV
