@@ -14,8 +14,13 @@ const getlist: any = async () => {
                 },
                 cache: 'no-store'
             });
-        console.log("JSONNN");
-        const data = await response.json();
+        const { data } = await response.json();
+
+        if (data !== undefined && data !== null) {
+            return data;
+        } else {
+            return [];
+        }
 
         return data;
     } catch (error) {
@@ -26,8 +31,8 @@ const getlist: any = async () => {
 
 export default async function Techstack() {
 
-    const { data } = await getlist();
-    console.log("data: " , data);
+    const data = await getlist();
+    console.log("data: ", data);
 
     return (
         <div className="techstack flex flex-col items-center cursor-pointer">
