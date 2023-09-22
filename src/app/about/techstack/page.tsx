@@ -14,8 +14,7 @@ const getlist: any = async () => {
                 },
                 cache: 'no-store'
             });
-        console.log(await response.json());
-        console.log(process.env.NEXT_PUBLIC_HOST);
+        console.log("JSONNN");
         const data = await response.json();
 
         return data;
@@ -28,6 +27,7 @@ const getlist: any = async () => {
 export default async function Techstack() {
 
     const { data } = await getlist();
+    console.log("data: " , data);
 
     return (
         <div className="techstack flex flex-col items-center cursor-pointer">
