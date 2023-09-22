@@ -2,7 +2,7 @@ import Link from "next/link";
 import { IconLink } from "./IconLink";
 import { about, socialLinks } from "./../../data";
 import Image from "next/image";
-import qrcode from "@/assets/images/qrcode.svg";
+import qrcode from "@/assets/images/qrcode.png";
 
 const Footer = async () => {
 
