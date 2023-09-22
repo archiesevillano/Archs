@@ -15,6 +15,7 @@ const getlist: any = async () => {
                 cache: 'no-store'
             });
 
+        console.log(process.env.NEXT_PUBLIC_HOST);
         const data = await response.json();
 
         return data;
