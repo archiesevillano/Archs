@@ -98,8 +98,8 @@ export default function Projects() {
 
     return (
         <main className="projectPage flex flex-col items-center">
-            <header className="flex flex-row justify-start items-center mt-[100px] md:px-[180px] px -10 w-full py-20">
-                < div className="flex flex-col items-start" >
+            <header className="flex flex-row justify-start items-center mt-[100px] md:px-[180px] px-10 w-full py-20">
+                <div className="flex flex-col items-start" >
                     <HistoryBackBtn />
                     <h2 className="text-5xl font-bold font-rubik mb-2">Discover some of my design ideas and projects</h2>
                     <p className="opacity-80 font-quicksand">
@@ -107,7 +107,7 @@ export default function Projects() {
                     </p>
                 </div >
             </header >
-            <div className="projectListWrapper flex flex-col justify-start items-start max-w-[1300px] w-full py-10 px-10 gap-10 pb-28">
+            <div className="projectListWrapper flex flex-col justify-start items-start max-w-[1300px] w-full py-10 sm:px-10 px-5 gap-10 pb-28">
                 <div className="projectListMenu flex justify-between items-center w-full">
                     <div className="showingContainer">
                         <span className="me-2">Showing: </span>
