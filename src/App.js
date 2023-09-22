@@ -65,6 +65,12 @@ function App() {
   return (
     <div className="App">
       {
+        loaded === false ? <div className="popup" style={{ position: "fixed", transform: "translate(-50%, -50%)", top: "50%", left: "50%", zIndex: 10, background: "#f2f2f2", borderRadius: "15px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", padding: "20px" }}>
+          <h1>New Version of Portfolio has just been released</h1>
+          <p>Go visit my new portfolio at: <a style={{ color: "#28a1e7" }} href="https://archs-portfolio.vercel.app/">https://archs-portfolio.vercel.app/</a></p>
+        </div> : <></>
+      }
+      {
         loaded ? <AppRoutes>
           <SnackBar>
             <AppHeader />
