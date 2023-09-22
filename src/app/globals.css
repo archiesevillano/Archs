@@ -153,3 +153,10 @@ body {
 .featuredWorks .swiper-slide {
   width: max-content;
 }
+
+@media (max-width: 400px) {
+  .projectList {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

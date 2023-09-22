@@ -50,7 +50,7 @@ const NavBar = () => {
         <nav className={`navbar w-full fixed top-0 left-0 z-30 py-2 flex items-center justify-center border-b bg-body-plain border-gray-100`}>
             <div className="flex items-center justify-between gap-5 max-w-[1300px] md:px-10 w-full">
                 <Brand />
-                <ul className={`navigationList w-full md:text-right md:static fixed top-[50px] left-0 z-[29] h-screen md:h-[auto] bg-zinc-300 md:p-0 ps-10 pt-[50px] ${toggleState.payload ? "active" : ""}`}>
+                <ul className={`navigationList w-full md:text-right md:static fixed top-[65px] left-0 z-[29] h-screen md:h-[auto] bg-zinc-300 md:p-0 ps-10 pt-[50px] ${toggleState.payload ? "active" : ""}`}>
                     {navItems(activeLink ? activeLink : "")}
                     <li className="my-5 md:hidden block pointer-events-none flex items-center w-full"><hr style={{ border: "1px solid rgba(0,0,0,0.2)", width: "80%", borderRadius: "10px" }} /></li>
                     <li className="ms-10 text-center hidden md:inline">
