@@ -8,8 +8,15 @@ const MissingPage = () => {
     const router = useRouter();
 
     const handleClick = () => {
-        // redirect the user to other page
-        router.back();
+
+        if (window.history.length > 1) {
+            // redirect the user to other page
+            router.back();
+        }
+        else {
+            window.location.href = `${process.env.NEXT_PUBLIC_HOST}/projects`;
+        }
+
     }
 
     return (
