@@ -162,8 +162,10 @@ export default function Projects() {
                                 </div>
                             </div>
                             <div className="flex lg:flex-row flex-col md:items-center md:justify-start gap-3 w-full">
-                                <Link className="inline-block py-2 px-3 rounded font-quicksand flex flex-row gap-3 text-white bg-random-red border-2 border-random-red lg:w-[50%] w-full justify-center items-center" href={selectedItem?.liveLink === undefined ? "" : selectedItem?.liveLink}>
-                                    <i className="fi fi-br-globe inline-block translate-y-[3px]"></i>
+                                <Link style={{ opacity: selectedItem?.liveLink === "" ? "0.8" : "1", cursor: selectedItem?.liveLink === "" ? "not-allowed" : "pointer" }} className="inline-block py-2 px-3 rounded font-quicksand flex flex-row gap-3 text-white bg-random-red border-2 border-random-red lg:w-[50%] w-full justify-center items-center" href={selectedItem?.liveLink === undefined ? "" : selectedItem?.liveLink}>
+                                    {
+                                        isClient ? selectedItem?.liveLink === "" || selectedItem?.liveLink === undefined ? <i className="fi fi-rr-ban me-3 inline-block translate-y-[3px]" style={{ color: "#f2f2f2", display: isClient ? selectedItem?.liveLink === "" || selectedItem?.liveLink === undefined ? "inline" : "none" : "none" }}></i> : <i className="fi fi-br-globe inline-block translate-y-[3px]"></i> : <></>
+                                    }
                                     <span className="text-sm">Visit Live Link</span>
                                 </Link>
                                 <Link className="inline-block py-2 px-3 rounded font-quicksand flex flex-row gap-3 lg:w-[50%] w-full border-2 bg-random-dark text-white border-random-dark justify-center items-center" href={selectedItem?.sourceLink === undefined ? "" : selectedItem?.sourceLink}>
