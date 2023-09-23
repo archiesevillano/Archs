@@ -37,8 +37,6 @@ const filteredData = async (filterType: string | null = "") => {
     const data = await ProjectList();
     const projects = data.filter((item: ProjectType) => filterType?.toLowerCase() === "all" || filterType === "" || item.type.toLowerCase() === filterType?.toLowerCase());
 
-    console.log(data);
-    console.log("Project List: ", projects);
     const filteredProjects = projects.map((project: ProjectType) => <FrameCard key={project._id} shadowed={true} photo={project.photo} logo={project.logo} title={project.title} projectType={project.type} link={`?pid=${project._id}`} />);
 
     return filteredProjects;
@@ -53,7 +51,6 @@ export default function Projects() {
     const selectedItemID: string | null = searchParams.get("pid") !== null ? searchParams.get("pid") : "";
     const [data, setData] = useState<null | [] | any>(null);
     const [selectedItem, setSelectedItem] = useState<ProjectType | null>(null);
-    console.log("page load");
 
     const [isClient, setToClient] = useState<boolean>(false);
 
@@ -71,7 +68,6 @@ export default function Projects() {
             if (selectedItemID) {
                 const item = await ProjectList();
                 const data = item.filter((item: ProjectType) => item._id === selectedItemID);
-                console.log("data", data);
                 if (data.length > 0) {
                     setSelectedItem(data[0]);
                     setSelectedState(true);
@@ -85,7 +81,6 @@ export default function Projects() {
     }, [searchParams]);
 
     const handleClose = () => {
-        console.log(window.history.length);
         if (window.history.length > 1) {
             navigation.back();
             setSelectedState(false);

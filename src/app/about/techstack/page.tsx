@@ -32,7 +32,6 @@ const getlist: any = async () => {
 export default async function Techstack() {
 
     const data = await getlist();
-    console.log("data: ", data);
 
     return (
         <div className="techstack flex flex-col items-center cursor-pointer">

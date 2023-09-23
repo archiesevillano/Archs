@@ -10,7 +10,6 @@ import { NavToggleActionType, ToggleNavLabel, navItems } from "../../types";
 
 const NavBar = () => {
 
-    const [scrolled, setScrolling] = useState<boolean>(false);
     const activeLink: string | null = useSelectedLayoutSegment();
 
     const reducer = (state: { payload: boolean }, action: NavToggleActionType) => {
@@ -26,25 +25,15 @@ const NavBar = () => {
         }
     };
 
+    const navItems = (activeLink: string = "/") => {
+        return navigationItems.map((navItem: navItems) => <li key={navItem.id} className="md:inline block md:mx-3 m-0 md:w-[100px] w-full"><Link href={navItem.href} onClick={() => dispatch({ type: toggleState.payload ? ToggleNavLabel.OFF : ToggleNavLabel.ON, payload: !toggleState })} className={`navbarItems w-full md:w-max inline-block py-2 md:px-3 px-0 font-quicksand font-bold md:hover:text-primary-100 md:hover:opacity-100 transition duration-[500ms] ${activeLink.replace("/", "") === navItem.href.replace("/", "") ? 'active' : ''}`}>{navItem.name}</Link></li>);
+    }
+
+    const extras = (activeLink: string = "/") => {
+        return about.map((navItem: navItems) => <li key={navItem.id} className="md:hidden block md:mx-2 m-0 md:w-[100px] w-full"><Link href={navItem.href} className={`navbarItems w-full md:w-max inline-block py-2 md:px-3 px-0 font-quicksand font-bold md:hover:text-primary-100 opacity-70 hover:opacity-100 transition duration-[500ms] text-sm ${activeLink.replace("/", "") === navItem.href.replace("/", "") ? 'active' : ''}`}>{navItem.name}</Link></li>);
+    }
+
     const [toggleState, dispatch] = useReducer(reducer, { payload: false });
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 100) {
-                // Change the scroll threshold (100 in this case) as needed
-                setScrolling(true);
-            } else {
-                setScrolling(false);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        // Clean up the event listener when the component unmounts
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
 
     return (
         <nav className={`navbar w-full fixed top-0 left-0 z-30 py-2 flex items-center justify-center border-b bg-body-plain border-gray-100`}>
@@ -71,14 +60,6 @@ const NavBar = () => {
             </div>
         </nav>
     );
-}
-
-const navItems = (activeLink: string = "/") => {
-    return navigationItems.map((navItem: navItems) => <li key={navItem.id} className="md:inline block md:mx-3 m-0 md:w-[100px] w-full"><Link href={navItem.href} className={`navbarItems w-full md:w-max inline-block py-2 md:px-3 px-0 font-quicksand font-bold md:hover:text-primary-100 md:hover:opacity-100 transition duration-[500ms] ${activeLink.replace("/", "") === navItem.href.replace("/", "") ? 'active' : ''}`}>{navItem.name}</Link></li>);
-}
-
-const extras = (activeLink: string = "/") => {
-    return about.map((navItem: navItems) => <li key={navItem.id} className="md:hidden block md:mx-2 m-0 md:w-[100px] w-full"><Link href={navItem.href} className={`navbarItems w-full md:w-max inline-block py-2 md:px-3 px-0 font-quicksand font-bold md:hover:text-primary-100 opacity-70 hover:opacity-100 transition duration-[500ms] text-sm ${activeLink.replace("/", "") === navItem.href.replace("/", "") ? 'active' : ''}`}>{navItem.name}</Link></li>);
 }
 
 export default NavBar;
