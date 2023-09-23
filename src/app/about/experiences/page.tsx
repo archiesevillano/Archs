@@ -41,9 +41,9 @@ export default async function Experience() {
                     </p>
                 </div>
             </header>
-            <section className="py-28 flex md:flex-row flex-col md:justify-evenly md:gap-0 gap-8 items-center max-w-[1300px] w-full">
+            <section className="py-28 flex md:flex-row flex-col md:justify-evenly md:gap-0 gap-8 items-center max-w-[1300px] w-full overflow-hidden">
                 <Tree collection={data} />
-                <div className="flex flex-col gap-5 w-[400px] ps-[40px]">
+                <div className="flex flex-col gap-5 max-w-[400px] w-full ps-[40px]">
                     <h2 className="font-bold text-2xl font-josefin">
                         WORK JOURNEY
                     </h2>

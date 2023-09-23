@@ -30,7 +30,7 @@ const NavBar = () => {
     }
 
     const extras = (activeLink: string = "/") => {
-        return about.map((navItem: navItems) => <li key={navItem.id} className="md:hidden block md:mx-2 m-0 md:w-[100px] w-full"><Link href={navItem.href} className={`navbarItems w-full md:w-max inline-block py-2 md:px-3 px-0 font-quicksand font-bold md:hover:text-primary-100 opacity-70 hover:opacity-100 transition duration-[500ms] text-sm ${activeLink.replace("/", "") === navItem.href.replace("/", "") ? 'active' : ''}`}>{navItem.name}</Link></li>);
+        return about.map((navItem: navItems) => <li key={navItem.id} className="md:hidden block md:mx-2 m-0 md:w-[100px] w-full"><Link href={navItem.href} onClick={() => dispatch({ type: toggleState.payload ? ToggleNavLabel.OFF : ToggleNavLabel.ON, payload: !toggleState })} className={`navbarItems w-full md:w-max inline-block py-2 md:px-3 px-0 font-quicksand font-bold md:hover:text-primary-100 opacity-70 hover:opacity-100 transition duration-[500ms] text-sm ${activeLink.replace("/", "") === navItem.href.replace("/", "") ? 'active' : ''}`}>{navItem.name}</Link></li>);
     }
 
     const [toggleState, dispatch] = useReducer(reducer, { payload: false });
