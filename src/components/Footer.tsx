@@ -1,3 +1,5 @@
+'use client';
+
 import Link from "next/link";
 import { IconLink } from "./IconLink";
 import { about, socialLinks } from "./../../data";
@@ -5,6 +7,13 @@ import Image from "next/image";
 import qrcode from "@/assets/images/qrcode.png";
 
 const Footer = async () => {
+
+    const isBrowser = () => typeof window !== 'undefined';
+
+    const scrollToTop = () => {
+        if (!isBrowser()) return;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
     return (
         <footer className="appFooter flex flex-col gap-3 md:px-[170px] px-10 pt-[70px] pb-[10px] bg-secondary-200">
@@ -25,7 +34,7 @@ const Footer = async () => {
                 <div className="flex md:flex-row flex-col md:gap-40 gap-10">
                     <ul className="md:text-start text-center">
                         <li className="text-lg font-bold">Sitemap</li>
-                        <li key="backToTopFooterLink"><Link className="text-sm" href={"/"}>Back to Top</Link></li>
+                        <li key="backToTopFooterLink"><button className="text-sm" onClick={scrollToTop} >Back to Top</button></li>
                         <li key="projectsPath"><Link className="text-sm" href={"/projects"}>Projects</Link></li>
                         <li key="webToolsPath"><Link className="text-sm" href={"/webTools"}>Web Tools</Link></li>
                         <li key="codeBucket"><Link className="text-sm" href={"/codeBucket"}>Code Bucket</Link></li>
@@ -66,9 +75,9 @@ const Footer = async () => {
             <div className="mt-10 opacity-40 flex md:flex-row flex-col md:justify-between items-center">
                 <p className="text-sm">&copy; 2023 Archs</p>
                 <ul className="m-0 p-0">
-                    <li className="inline opacity-60 me-5 text-xs" key={"privacyLink"}><Link href="/">Privacy</Link></li>
-                    <li className="inline opacity-60 me-5 text-xs" key={"accessibilityLink"}><Link href="/">Accessibility</Link></li>
-                    <li className="inline opacity-60 me-5 text-xs" key={"termsLinks"}><Link href="/">Terms</Link></li>
+                    <li className="inline opacity-60 me-5 text-xs" key={"privacyLink"}><Link href={`${process.env.NEXT_PUBLIC_HOST}/privacy`}>Privacy</Link></li>
+                    <li className="inline opacity-60 me-5 text-xs" key={"accessibilityLink"}><Link href={`${process.env.NEXT_PUBLIC_HOST}/accessibility`}>Accessibility</Link></li>
+                    <li className="inline opacity-60 me-5 text-xs" key={"termsLinks"}><Link href={`${process.env.NEXT_PUBLIC_HOST}/terms`}>Terms</Link></li>
                 </ul>
             </div>
         </footer>
