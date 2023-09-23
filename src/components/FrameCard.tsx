@@ -15,7 +15,7 @@ const FrameCard = async ({ photo, logo, title, projectType, link, shadowed }: Fr
                 </div>
                 <div className="lower flex justify-between items-center absolute bottom-0 w-full z-[1] bg-white p-3">
                     <div className="logoContainer flex items-center justify-center gap-4">
-                        <Image src={logo} alt="logo" className="object-contain" width={30} height={30} />
+                        <Image src={logo} alt="logo" className="logo object-contain p-1 w-[30px] w-[30px]" width={30} height={30} />
                         <span className="inline-block font-quicksand font-bold">
                             {title}
                         </span>

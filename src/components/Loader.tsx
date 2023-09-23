@@ -15,7 +15,7 @@ const Loader = async () => {
                 <div className="banter-loader__box"></div>
                 <div className="banter-loader__box"></div>
             </div>
-            <p className="font-mukta font-bold translate-y-[150px]" style={{ color: "var(--forecolor)" }}>Loading</p>
+            <p className="font-mukta font-bold translate-y-[150px]">Loading</p>
         </div>
 
     );

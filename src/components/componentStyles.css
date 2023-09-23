@@ -121,7 +121,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: #e92121;
 }
 
 .banter-loader__box:nth-child(3n) {
@@ -625,4 +625,11 @@
     box-shadow: -8px -4px 202px -51px rgba(0, 0, 0, 0.42);
     -webkit-box-shadow: -8px -4px 202px -51px rgba(0, 0, 0, 0.42);
     -moz-box-shadow: -8px -4px 202px -51px rgba(0, 0, 0, 0.42);
+}
+
+.frameCard .logo {
+    max-width: 30px !important;
+    max-height: 30px !important;
+    width: 30px !important;
+    height: 30px !important;
 }

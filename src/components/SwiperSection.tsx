@@ -16,19 +16,15 @@ const SwiperSection = () => {
         const handleResize = () => {
             if (window.matchMedia(`(min-width:1500px)`).matches) {
                 setViews("auto");
-                console.log("1500px");
             }
             else if (window.matchMedia(`(min-width:1300px)`).matches) {
                 setViews(3);
-                console.log("1300px");
             }
             else if (window.matchMedia(`(min-width:900px)`).matches) {
                 setViews(2);
-                console.log("900px");
             }
             else if (window.matchMedia(`(max-width:500px)`).matches) {
                 setViews("auto");
-                console.log("500px");
             }
         };
 
