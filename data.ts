@@ -57,7 +57,7 @@ export const socialLinks = [
         id: "li2",
         name: "LinkedIn",
         iconClass: "fi fi-brands-linkedin",
-        link: "www.linkedin.com/in/archie-sevillano-24118227a"
+        link: "https://www.linkedin.com/in/archie-sevillano-24118227a"
     },
     {
         id: "gh3",
