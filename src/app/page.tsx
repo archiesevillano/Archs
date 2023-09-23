@@ -25,7 +25,7 @@ export default function Home() {
               I&apos;m a passionate web developer with a strong foundation in coding, cultivated during my top-performing journey in a 3-month bootcamp. I thrive on learning and adapting to new tech challenges, and my keen eye for detail extends to design and Adobe skills. My goal is to contribute effectively in the IT world, combining my coding prowess and commitment to constant improvement.
             </p>
             <div className="downloadCVBtn inline-block w-max bg-primary-200 mt-5 rounded-sm rounded" role="button">
-              <a href="https://drive.google.com/uc?export=download&id=152HeDcS56r9r3ZHGG5ivAcYkM3Fs1Ck2" className="py-2 px-5 inline-block" download referrerPolicy="no-referrer" style={{ color: "#f2f2f2" }}>
+              <a href="https://drive.google.com/uc?export=download&id=134sLlB8Ahwg5E29yvF2vXklDPou4D5GE" className="py-2 px-5 inline-block" download referrerPolicy="no-referrer" style={{ color: "#f2f2f2" }}>
                 <i className="fi fi-br-download me-3 inline-block translate-y-[3px]"></i>
                 <span className="text-sm">
                   Download CV
