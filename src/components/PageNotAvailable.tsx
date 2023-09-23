@@ -21,7 +21,7 @@ const PageNotAvailable = () => {
     return (
         <div className="pageNotAvailale flex flex-col items-center justify-center px-10 translate-y-[50px]">
             <Image alt="Fixing Page" width={900} height={900} src={fix} className="max-w-[500px] object-contain w-full" />
-            <p className="mt-10">Sorry, we're currently working with the content of this page</p>
+            <p className="mt-10">Sorry, we&apos;re currently working with the content of this page</p>
             <button type="button" onClick={handleGoBack} className="mt-5 border-2 px-4 py-2 font-quicksand font-bold mb-[100px] rounded-lg">
                 <i className="fi fi-rr-arrow-small-left translate-y-[3px] me-3 inline-block"></i>
                 Go back
