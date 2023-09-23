@@ -166,11 +166,13 @@ export default function Projects() {
                                     {
                                         isClient ? selectedItem?.liveLink === "" || selectedItem?.liveLink === undefined ? <i className="fi fi-rr-ban me-3 inline-block translate-y-[3px]" style={{ color: "#f2f2f2", display: isClient ? selectedItem?.liveLink === "" || selectedItem?.liveLink === undefined ? "inline" : "none" : "none" }}></i> : <i className="fi fi-br-globe inline-block translate-y-[3px]"></i> : <></>
                                     }
-                                    <span className="text-sm">Visit Live Link</span>
+                                    <span className="text-sm">View Project</span>
                                 </Link>
-                                <Link className="inline-block py-2 px-3 rounded font-quicksand flex flex-row gap-3 lg:w-[50%] w-full border-2 bg-random-dark text-white border-random-dark justify-center items-center" href={selectedItem?.sourceLink === undefined ? "" : selectedItem?.sourceLink}>
-                                    <i className="fi fi-rr-display-code inline-block translate-y-[3px]"></i>
-                                    <span className="text-sm">View Source Code</span>
+                                <Link style={{ opacity: selectedItem?.sourceLink === "" ? "0.8" : "1", cursor: selectedItem?.sourceLink === "" ? "not-allowed" : "pointer" }} className="inline-block py-2 px-3 rounded font-quicksand flex flex-row gap-3 lg:w-[50%] w-full border-2 bg-random-dark text-white border-random-dark justify-center items-center" href={selectedItem?.sourceLink === undefined ? "" : selectedItem?.sourceLink}>
+                                    {
+                                        isClient ? selectedItem?.sourceLink === "" || selectedItem?.sourceLink === undefined ? <i className="fi fi-rr-ban me-3 inline-block translate-y-[3px]" style={{ color: "#f2f2f2", display: isClient ? selectedItem?.sourceLink === "" || selectedItem?.sourceLink === undefined ? "inline" : "none" : "none" }}></i> : <i className="fi fi-rr-display-code inline-block translate-y-[3px]"></i> : <></>
+                                    }
+                                    <span className="text-sm">View Project Source</span>
                                 </Link>
                             </div>
                         </div>
