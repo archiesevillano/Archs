@@ -6,7 +6,7 @@ import { about, socialLinks } from "./../../data";
 import Image from "next/image";
 import qrcode from "@/assets/images/qrcode.png";
 
-const Footer = async () => {
+const Footer = () => {
 
     const isBrowser = () => typeof window !== 'undefined';
 
