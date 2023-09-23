@@ -35,7 +35,7 @@ export default async function WebTools() {
             <header className="flex flex-row justify-start items-center mt-[70px] md:px-[180px] px-10 w-full py-20">
                 <div className="flex flex-col items-start">
                     <HistoryBackBtn />
-                    <h2 className="text-5xl font-bold font-rubik mb-2">Free Website Development helper tools</h2>
+                    <h2 className="sm:text-5xl text-3xl font-bold font-rubik mb-2">Free Website Development helper tools</h2>
                     <p className="opacity-80 font-quicksand">
                         Here is the list of free websites that you can use to for development convenience.
                     </p>
